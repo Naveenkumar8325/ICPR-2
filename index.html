@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ICPR Homepage 3</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Official website of the Indian Council of Philosophical Research (ICPR), an autonomous body fully funded by the Ministry of Education, Government of India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: 12-column grid, 1280px container, 24px gutter (16px on phones).
+   DBIM colour group: Blue. Typeface: Noto Sans (DBIM 4.1). */
+:root{
+  /* DBIM primary palette: #771D1D group */
+  --key:#771D1D;      /* key colour (darkest): footer, nav, headings accents */
+  --key-2:#A72626;    /* buttons, links (7.1:1 on white) */
+  --key-3:#D75151;    /* decorative only, never text */
+  --key-4:#FAAAAA;    /* decorative tint, text on --key */
+  --key-5:#FCDADA;    /* lightest tint backgrounds */
+  /* DBIM functional palette */
+  --bg:#FFFFFF;        /* Inclusive white */
+  --linen:#EBEAEA;     /* outlines, quote bg */
+  --surface:#F7F5F5;   /* soft panel, linen-derived */
+  --text:#150202;      /* Deep earthy brown */
+  --muted:#606060;     /* Grey 03 */
+  --line:#C6C6C6;      /* Grey 01 */
+  --on-key:#FFFFFF;
+  --success:#198754; --warning:#FFC107; --error:#DC3545; --info:#0D6EFD;
+  /* Type: Noto Sans, DBIM desktop scale */
+  --font:"Noto Sans","Noto Sans Devanagari",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --h1:2.25rem; --h2:1.5rem; --h3:1.25rem; --p1:1rem; --p2:.875rem; --small:.75rem;
+  --gutter:24px; --radius:4px; --container:1280px;
+}
+/* DBIM mobile type scale */
+@media (max-width:767.98px){
+  :root{ --h1:1.5rem; --h2:1.25rem; --h3:1rem; --p1:.875rem; --p2:.75rem; --small:.625rem; --gutter:16px; }
+}
+/* High-contrast mode (accessibility control in the top bar) */
+body.hc{
+  --key:#000; --key-2:#FFE066; --key-3:#FFE066; --key-4:#FFE066; --key-5:#000;
+  --bg:#000; --linen:#444; --surface:#000; --text:#FFF; --muted:#FFF; --line:#FFF; --on-key:#FFF;
+}
+body.hc .btn-primary{color:#000}
+body.hc img{filter:grayscale(.2) contrast(1.1)}
+body.hc .brand-hi,body.hc .brand-en,body.hc .fact dd,body.hc .strip-text h2,body.hc .contact-tile .big,body.hc .social a,body.hc .pub .ic,body.hc .a11y-head .icon,body.hc .eyebrow{color:#FFE066}
+body.hc .strip{background:#000}
+body.hc .search button{color:#000}
+body.hc .a11y-panel{border-color:#FFF}
+body.hc .a11y-opt{color:#FFF;border-color:#FFF;background:#000}
+body.hc .a11y-opt:hover{background:#222}
+body.hc .a11y-opt[aria-pressed="true"],body.hc .controls .lang-btn[aria-pressed="true"],body.hc .controls #a11yBtn[aria-expanded="true"]{background:#FFE066;color:#000;border-color:#FFE066}
+body.hc .tile .ic,body.hc .strip .badge-icon{background:#000;border:2px solid #FFE066;color:#FFE066}
+html{font-size:16px}
+html[lang="hi"] .gov-hi{display:none}
+html[lang="hi"] body{line-height:1.7}
+.controls .lang-btn[aria-pressed="true"]{background:var(--key);color:#fff}
+.controls #a11yBtn[aria-expanded="true"]{background:var(--key);color:#fff}
+
+/* ---------- Accessibility controls panel ---------- */
+.a11y-panel{position:fixed;z-index:90;top:calc(env(safe-area-inset-top,0px) + 48px);right:max(16px,env(safe-area-inset-right,0px));width:min(420px,calc(100vw - 32px));max-height:calc(100vh - 64px);overflow-y:auto;background:var(--bg);color:var(--text);border:1px solid var(--linen);border-radius:12px;box-shadow:0 16px 48px rgba(21,2,2,.22);padding:20px}
+.a11y-head{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.a11y-head .icon{color:var(--key)}
+.a11y-head h2{font-size:var(--h3);font-weight:600;margin-right:auto}
+.a11y-close{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:0;background:none;color:var(--muted);border-radius:50%}
+.a11y-close:hover{background:var(--surface);color:var(--text)}
+.a11y-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.a11y-opt{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-height:112px;padding:16px 8px;background:var(--bg);color:var(--key);border:1.5px solid var(--key);border-radius:8px;text-align:center}
+.a11y-opt:hover{background:var(--key-5)}
+.a11y-opt[aria-pressed="true"]{background:var(--key);color:#fff}
+.a11y-opt .lbl{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1.3}
+.a11y-opt .state{font-size:.75rem;font-weight:500;letter-spacing:0;text-transform:none;margin-top:-6px}
+.a11y-opt .icon{width:40px;height:40px}
+.a11y-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:16px;flex-wrap:wrap}
+.a11y-status{font-size:var(--p2);color:var(--muted)}
+html[lang="hi"] .a11y-opt .lbl{letter-spacing:0;font-size:.8125rem}
+@media (max-width:575.98px){.a11y-panel{top:calc(env(safe-area-inset-top,0px) + 8px);padding:16px}.a11y-opt{min-height:96px}}
+
+/* ---------- Accessibility effects ---------- */
+html.a11y-links a{background:#FFE066!important;color:#000!important;text-decoration:underline!important;outline:2px solid #000;outline-offset:1px}
+html.a11y-noimg img{visibility:hidden}
+html.a11y-noimg .banner::after{background:var(--key)}
+html.a11y-cursor,html.a11y-cursor *{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M6 4l0 34 9-9 6 14 7-3-6-14 13 0z' fill='%23000' stroke='%23fff' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E") 6 4,auto!important}
+.fx{filter:var(--fx,none)}
+header.fx,main.fx{background:var(--bg)}
+html.a11y-invert img{filter:invert(1) hue-rotate(180deg)}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:var(--p1);line-height:1.6;}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--key)}
+*,*::before,*::after{box-sizing:border-box}
+h1,h2,h3,h4{margin:0;line-height:1.3;text-wrap:balance;color:var(--text)}
+h2{font-size:var(--h2);font-weight:600}
+h3{font-size:var(--h3);font-weight:600}
+p{margin:0}
+a{color:var(--key-2);text-underline-offset:3px}
+a:hover{color:var(--key)}
+ul{margin:0;padding:0;list-style:none}
+img{max-width:100%;height:auto;display:block}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--text);outline-offset:2px;box-shadow:0 0 0 5px var(--bg)}
+.on-dark :focus-visible,.on-dark:focus-visible{outline-color:#fff;box-shadow:0 0 0 5px var(--key)}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:8px;top:-60px;z-index:100;background:var(--key);color:#fff;padding:8px 16px;border-radius:var(--radius);font-weight:600}
+.skip:focus{top:8px;color:#fff}
+.icon{width:24px;height:24px;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.icon-32{width:32px;height:32px}.icon-48{width:48px;height:48px}
+
+/* ---------- 12-column grid ---------- */
+.container{max-width:calc(var(--container) + 2*max(16px,env(safe-area-inset-left,0px)));margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gutter)}
+.grid>*{grid-column:span 12;min-width:0}
+@media (min-width:576px){.sm-6{grid-column:span 6}.sm-4{grid-column:span 4}}
+@media (min-width:768px){
+  .md-3{grid-column:span 3}.md-4{grid-column:span 4}.md-5{grid-column:span 5}.md-6{grid-column:span 6}
+  .md-7{grid-column:span 7}.md-8{grid-column:span 8}.md-12{grid-column:span 12}
+}
+@media (min-width:992px){
+  .lg-2{grid-column:span 2}.lg-3{grid-column:span 3}.lg-4{grid-column:span 4}.lg-5{grid-column:span 5}.lg-6{grid-column:span 6}
+  .lg-7{grid-column:span 7}.lg-8{grid-column:span 8}.lg-12{grid-column:span 12}
+}
+.section{padding-block:32px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:16px}
+.view-all{font-size:var(--p2);font-weight:600;white-space:nowrap}
+.panel{background:var(--bg);border:1px solid var(--linen);border-radius:var(--radius);padding:20px}
+.panel-soft{background:var(--surface);border-radius:var(--radius);padding:20px}
+
+/* ---------- Buttons (DBIM CTA: consistent padding, ≤3 words, distinct states) ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 20px;border-radius:var(--radius);font-size:var(--p2);font-weight:600;text-decoration:none;border:2px solid transparent;transition:background .15s,color .15s,border-color .15s}
+.btn-primary{background:var(--key-2);color:#fff}
+.btn-primary:hover{background:var(--key);color:#fff}
+.btn-outline{border-color:currentColor;color:var(--key-2);background:transparent}
+.btn-outline:hover{background:var(--key-5);color:var(--key)}
+.btn-light{background:#fff;color:var(--key)}
+.btn-light:hover{background:var(--key-5);color:var(--key)}
+.btn-ghost-light{border-color:#fff;color:#fff}
+.btn-ghost-light:hover{background:rgba(255,255,255,.15);color:#fff}
+.btn[aria-disabled="true"]{background:var(--linen);color:var(--muted);pointer-events:none}
+
+/* ---------- Top utility bar (DBIM Header 2: parent ministry + user controls) ---------- */
+.topbar{background:var(--surface);border-bottom:1px solid var(--linen);font-size:var(--p2)}
+.topbar .container{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:40px;flex-wrap:wrap;padding-block:4px}
+.gov{display:flex;align-items:center;gap:10px;color:var(--text)}
+.flag{width:24px;height:16px;flex:none;border:1px solid var(--linen)}
+.controls{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.controls a,.controls button{display:inline-flex;align-items:center;gap:4px;min-height:32px;min-width:32px;justify-content:center;padding:2px 8px;background:none;border:1px solid transparent;border-radius:var(--radius);color:var(--text);text-decoration:none;font-size:var(--p2)}
+.controls button:hover,.controls a:hover{border-color:var(--line);color:var(--text)}
+.controls button[aria-pressed="true"]{background:var(--key);color:#fff}
+.controls .sep{width:1px;height:20px;background:var(--line);margin:0 4px}
+.lang-hi{font-family:"Noto Sans Devanagari",var(--font)}
+@media (max-width:575.98px){.skip-inline,.gov .gov-hi{display:none}}
+
+/* ---------- Main header ---------- */
+.masthead .container{display:flex;align-items:center;gap:24px;padding-block:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--text);margin-right:auto;min-width:0}
+.brand img{width:72px;height:72px;border-radius:50%}
+.brand-text{display:flex;flex-direction:column;min-width:0}
+.brand-hi{font-family:"Noto Sans Devanagari",var(--font);font-size:var(--p2);font-weight:600;color:var(--key)}
+.brand-en{font-size:var(--h3);font-weight:700;line-height:1.25;color:var(--key)}
+.brand-sub{font-size:var(--small);color:var(--muted)}
+.search{display:flex;align-items:stretch;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--bg);flex:0 1 320px;min-width:0}
+.search input{flex:1;min-width:0;border:0;padding:10px 12px;font:inherit;font-size:var(--p2);background:transparent;color:var(--text)}
+.search input:focus{outline:none}
+.search:focus-within{outline:3px solid var(--text);outline-offset:2px}
+.search button{border:0;background:var(--key-2);color:#fff;padding:0 14px;display:flex;align-items:center}
+.search button:hover{background:var(--key)}
+.marquee-logos{display:flex;align-items:center;gap:16px}
+.marquee-logos img{height:48px;width:auto}
+.social{display:flex;gap:6px}
+.social a{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;color:var(--key);border-radius:50%;border:1px solid var(--linen)}
+.social a:hover{background:var(--key-5)}
+@media (max-width:1199.98px){.marquee-logos{display:none}}
+@media (max-width:767.98px){.masthead .social{display:none}.search{flex:1 1 100%}.brand img{width:56px;height:56px}}
+
+/* ---------- Navigation ---------- */
+.nav{background:var(--key);position:sticky;top:env(safe-area-inset-top,0px);z-index:50}
+.nav .container{display:flex;align-items:center;min-height:48px}
+.nav-toggle{display:none;align-items:center;gap:8px;background:none;border:0;color:#fff;padding:10px 0;font-weight:600;font-size:var(--p1)}
+.menu{display:flex;flex-wrap:wrap;width:100%}
+.menu>li{position:relative}
+.menu>li>a,.menu>li>button{display:flex;align-items:center;gap:4px;min-height:48px;padding:0 12px;color:#fff;background:none;border:0;text-decoration:none;font-size:var(--p2);font-weight:500;white-space:nowrap}
+.menu>li>a:hover,.menu>li>button:hover,.menu>li>button[aria-expanded="true"]{background:rgba(0,0,0,.25);color:#fff}
+.menu>li>a[aria-current="page"]{box-shadow:inset 0 -3px 0 var(--key-4)}
+.menu .chev{width:16px;height:16px;transition:transform .15s}
+.menu button[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.submenu{position:absolute;left:0;top:100%;min-width:260px;background:var(--bg);border:1px solid var(--linen);border-top:3px solid var(--key-2);box-shadow:0 8px 24px rgba(21,2,2,.12);padding:6px 0;z-index:60}
+.submenu a{display:block;padding:9px 16px;color:var(--text);text-decoration:none;font-size:var(--p2)}
+.submenu a:hover{background:var(--key-5);color:var(--key)}
+@media (max-width:1199.98px){
+  .nav .container{flex-direction:column;align-items:stretch}
+  .nav-toggle{display:inline-flex}
+  .menu{display:none;flex-direction:column;padding-bottom:8px}
+  .menu.open{display:flex}
+  .menu>li>a,.menu>li>button{width:100%;justify-content:space-between;padding:0 4px;border-top:1px solid rgba(255,255,255,.15)}
+  .submenu{position:static;box-shadow:none;border:0;border-left:3px solid var(--key-4);margin:0 0 8px 4px;min-width:0}
+}
+
+/* ---------- Hero carousel + Important links ---------- */
+.hero{padding-top:24px}
+.carousel{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--text);aspect-ratio:16/9;max-width:100%}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .6s,visibility .6s}
+.slide.is-active{opacity:1;visibility:visible}
+.slide img{width:100%;height:100%;object-fit:cover}
+.slide figcaption{position:absolute;inset:auto 0 0 0;padding:56px 24px 64px;background:linear-gradient(to top,rgba(21,2,2,.88),rgba(21,2,2,0));color:#fff;font-size:var(--p1);font-weight:500}
+.slide figcaption strong{display:block;font-size:var(--h3);font-weight:600}
+.car-ctrl{position:absolute;left:24px;right:24px;bottom:16px;display:flex;align-items:center;gap:8px}
+.car-ctrl button{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.7);background:rgba(21,2,2,.55);color:#fff}
+.car-ctrl button:hover{background:var(--key)}
+.dots{display:flex;gap:6px;margin-left:auto}
+.dots button{width:12px;height:12px;min-width:12px;padding:0;border-radius:50%;background:transparent;border:2px solid #fff}
+.dots button[aria-current="true"]{background:#fff}
+@media (max-width:575.98px){.slide figcaption{padding:32px 16px 56px}.slide figcaption strong{font-size:var(--p1)}.car-ctrl{left:16px;right:16px;bottom:10px}}
+
+.links-card{height:100%;border:1px solid var(--key-4);border-radius:var(--radius);padding:20px 20px 12px;background:var(--bg);display:flex;flex-direction:column}
+.link-list li{border-bottom:1px solid var(--linen)}
+.link-list li:last-child{border-bottom:0}
+.link-list a{display:flex;align-items:center;gap:10px;padding:9px 0;color:var(--text);text-decoration:none;font-size:var(--p2)}
+.link-list a:hover{color:var(--key-2);text-decoration:underline}
+.link-list .icon{width:20px;height:20px;color:var(--key-2)}
+.ext{margin-left:auto;width:16px!important;height:16px!important;color:var(--muted)!important}
+
+/* ---------- Book store strip ---------- */
+.strip{margin-top:24px;border-radius:var(--radius);background:linear-gradient(90deg,var(--key-5),#fff 55%,var(--key-5));border:1px solid var(--key-4);padding:16px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.strip .badge-icon{width:56px;height:56px;border-radius:50%;background:var(--key);color:#fff;display:flex;align-items:center;justify-content:center;flex:none}
+.strip-text{flex:1 1 320px;min-width:0}
+.strip-text h2{font-size:var(--h3);color:var(--key)}
+.strip-text p{font-size:var(--p2);color:var(--text)}
+.tag-new{display:inline-block;margin-left:8px;padding:2px 8px;border-radius:999px;background:var(--success);color:#fff;font-size:var(--small);font-weight:600;vertical-align:middle}
+
+/* ---------- Quick access tiles ---------- */
+.tile{display:flex;flex-direction:column;gap:14px;height:100%;padding:20px;background:var(--surface);border-radius:var(--radius);text-decoration:none;color:var(--text);border:1px solid transparent;transition:border-color .15s,background .15s}
+.tile:hover{border-color:var(--key-2);background:var(--key-5);color:var(--text)}
+.tile .ic{width:56px;height:56px;border-radius:50%;background:var(--key);color:#fff;display:flex;align-items:center;justify-content:center}
+.tile h3{font-size:var(--p1);font-weight:600}
+.tile p{font-size:var(--p2);color:var(--muted)}
+.tile .go{margin-top:auto;align-self:flex-end;width:32px;height:32px;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--key-2);border:1px solid var(--linen)}
+.contact-tile{height:100%;padding:20px;background:var(--surface);border-radius:var(--radius);font-size:var(--p2);display:flex;flex-direction:column;gap:8px}
+.contact-tile h3{font-size:var(--p1);font-weight:600}
+.contact-tile .lbl{font-size:var(--small);font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.contact-tile .big{font-size:var(--h3);font-weight:700;color:var(--key-2);font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.contact-tile .note{font-size:var(--small);color:var(--muted)}
+
+/* ---------- Leadership card ---------- */
+.lead{height:100%;background:var(--surface);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:0}
+.headshot{width:96px;height:96px;border-radius:var(--radius);background:#fff;object-fit:cover;flex:none;border:1px solid var(--linen)}
+.role{display:block;font-size:var(--p2);color:var(--muted)}
+.lead-row{flex:1;display:flex;gap:16px;align-items:center;padding-block:12px}
+.lead-row+.lead-row{border-top:1px solid var(--linen)}
+.lead-row b{display:block;font-size:var(--p1);font-weight:600;line-height:1.35}
+.btn-sm{min-height:36px;padding:6px 14px;margin-top:8px;font-size:var(--small)}
+/* Notices: all panels share one grid cell so height stays constant across tabs */
+.tabpanels{display:grid}
+.tabpanels>.tabpanel{grid-area:1/1}
+.tabpanel.is-inactive{visibility:hidden}
+
+/* ---------- Fellowship banner (1800x500) ---------- */
+.banner{position:relative;color:#fff;background:var(--key);overflow:hidden}
+.banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(119,29,29,.96) 0%,rgba(119,29,29,.88) 45%,rgba(119,29,29,.25) 100%)}
+.banner .container{position:relative;z-index:1;padding-block:56px;min-height:min(500px,60vw);display:flex;align-items:center}
+.banner-body{max-width:620px;display:flex;flex-direction:column;gap:14px}
+.eyebrow{font-size:var(--p2);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--key-4)}
+.banner h2{font-size:var(--h1);font-weight:700;color:#fff}
+.banner p{font-size:var(--p1);color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips li{border:1px solid rgba(255,255,255,.6);border-radius:999px;padding:4px 12px;font-size:var(--p2)}
+.banner .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+@media (max-width:767.98px){.banner::after{background:rgba(119,29,29,.9)}}
+
+/* ---------- About + Updates ---------- */
+.about p{font-size:var(--p1);max-width:68ch}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+.fact{background:var(--surface);border-radius:var(--radius);padding:14px 16px}
+.fact dt{font-size:var(--small);font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.fact dd{margin:2px 0 0;font-size:var(--p1);font-weight:600;color:var(--key)}
+@media (max-width:575.98px){.facts{grid-template-columns:minmax(0,1fr)}}
+.audit{margin-top:20px;font-size:var(--p2)}
+.audit h3{font-size:var(--p1);margin-bottom:8px}
+.pill-links{display:flex;flex-wrap:wrap;gap:8px}
+.pill-links a{display:inline-block;padding:4px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--text);font-size:var(--p2)}
+.pill-links a:hover{border-color:var(--key-2);color:var(--key-2)}
+
+.updates{max-height:520px;overflow-y:auto;padding-right:6px}
+.update{padding:12px 0;border-bottom:1px solid var(--key-4)}
+.update:first-child{padding-top:0}
+.update a{color:var(--text);text-decoration:none;font-size:var(--p2);font-weight:500;display:block}
+.update a:hover{color:var(--key-2);text-decoration:underline}
+.meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:6px;font-size:var(--small);color:var(--muted)}
+.badge{display:inline-block;padding:1px 8px;border-radius:999px;font-weight:600;font-size:var(--small)}
+.b-result{background:#D1E7DD;color:#0A3622}
+.b-apply{background:var(--key-5);color:var(--key)}
+.b-recruit{background:#E7E3F3;color:#2B1A5C}
+.b-tender{background:#FFF3CD;color:#5C4400}
+.b-notice{background:var(--linen);color:var(--text)}
+
+/* ---------- Gallery + Publications ---------- */
+.media-list li{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--linen)}
+.media-list li:first-child{padding-top:0}
+.media-list li:last-child{border-bottom:0}
+.media-list img{width:144px;height:96px;object-fit:cover;border-radius:var(--radius);flex:none}
+.media-list p{font-size:var(--p2)}
+.media-list a{font-size:var(--p2);font-weight:600}
+.media-list .count{font-size:var(--small);color:var(--muted)}
+@media (max-width:575.98px){.media-list img{width:96px;height:64px}}
+.pub{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--linen)}
+.pub:first-child{padding-top:0}
+.pub:last-child{border-bottom:0}
+.pub .ic{width:56px;height:56px;border-radius:var(--radius);background:var(--key-5);color:var(--key);display:flex;align-items:center;justify-content:center;flex:none}
+.pub h3{font-size:var(--p1)}
+.pub p{font-size:var(--p2);color:var(--muted)}
+.pub .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:4px;font-size:var(--p2);font-weight:600}
+
+/* ---------- Notices (collage + tabs) ---------- */
+.notice-wrap{background:var(--surface);border-radius:var(--radius);padding:var(--gutter)}
+.collage{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;height:100%}
+.collage img{width:100%;height:100%;min-height:120px;object-fit:cover;border-radius:var(--radius)}
+.collage img:first-child{grid-column:span 2}
+.tablist{display:flex;gap:4px;border-bottom:2px solid var(--line);overflow-x:auto}
+.tablist button{background:none;border:0;padding:10px 14px;font-size:var(--p2);font-weight:600;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-2px;white-space:nowrap}
+.tablist button[aria-selected="true"]{color:var(--key-2);border-bottom-color:var(--key-2)}
+.tablist button:hover{color:var(--key)}
+.tabpanel{background:var(--bg);padding:8px 16px;border:1px solid var(--linen);border-top:0}
+.tabpanel li{padding:12px 0;border-bottom:1px solid var(--linen)}
+.tabpanel li:last-child{border-bottom:0}
+.tabpanel a{color:var(--text);text-decoration:none;font-size:var(--p2);font-weight:500}
+.tabpanel a:hover{color:var(--key-2);text-decoration:underline}
+.tabpanel .more{display:inline-block;margin:8px 0 6px;font-weight:600;color:var(--key-2)}
+
+/* ---------- Partner logos ---------- */
+.partners{border-top:1px solid var(--linen)}
+.logos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (min-width:576px){.logos{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (min-width:992px){.logos{grid-template-columns:repeat(8,minmax(0,1fr))}}
+.logos a{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:84px;padding:10px;background:#fff;border:1px solid var(--linen);border-radius:var(--radius);text-decoration:none;text-align:center;color:#150202;font-size:var(--p2);font-weight:600;line-height:1.25}
+.logos a:hover{border-color:var(--key-2)}
+.logos img{max-height:56px;width:auto;max-width:100%;object-fit:contain}
+.logos small{display:block;font-weight:400;font-size:var(--small);color:#606060}
+
+/* ---------- Footer (DBIM 5.6: key colour) ---------- */
+.footer{background:var(--key);color:#fff;font-size:var(--p2)}
+.footer a{color:#fff}
+.footer a:hover{color:var(--key-4)}
+.footer .container{padding-block:40px 24px}
+.f-brand{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.f-brand img{width:56px;height:56px;border-radius:50%;background:#fff}
+.f-brand b{display:block;font-size:var(--h3);line-height:1.25}
+.f-brand span{font-family:"Noto Sans Devanagari",var(--font);color:var(--key-4)}
+.footer h2{font-size:var(--p1);color:#fff;margin-bottom:10px;font-weight:600}
+.footer address{font-style:normal}
+.footer dl{margin:0;display:grid;gap:8px}
+.footer dt{color:var(--key-4);font-size:var(--small);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.footer dd{margin:0;font-variant-numeric:tabular-nums}
+.f-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 16px}
+.f-links a{text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.f-links a:hover{text-decoration:underline}
+.f-social{display:flex;gap:8px;margin-top:16px}
+.f-social a{width:40px;height:40px;border:1px solid rgba(255,255,255,.5);border-radius:50%;display:inline-flex;align-items:center;justify-content:center}
+.f-social a:hover{background:rgba(255,255,255,.15)}
+.f-bottom{border-top:1px solid rgba(255,255,255,.25);margin-top:28px;padding-top:16px;display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;align-items:center}
+.f-bottom p{max-width:70ch}
+.updated{font-weight:600}
+.govin{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--key)!important;padding:6px 12px;border-radius:var(--radius);text-decoration:none;font-weight:700}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+/* Navigation spacing; chevrons are decorative only (no dropdowns) */
+@media (min-width:1200px){
+  .menu{justify-content:space-between;flex-wrap:nowrap}
+  .menu>li>a{padding:0 10px;gap:6px}
+}
+.menu .chev{pointer-events:none;width:16px;height:16px;opacity:.85}
+
+/* Fixed (sticky) header on scroll, compact once the page is scrolled */
+header.fx{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bg);transition:box-shadow .2s}
+header.fx .nav{position:static}
+html{scroll-padding-top:var(--hdr-h,200px)}
+header.is-stuck{box-shadow:0 6px 18px rgba(21,2,2,.14)}
+.masthead .container,.brand img{transition:padding .2s,width .2s,height .2s}
+header.is-stuck .masthead .container{padding-block:6px}
+header.is-stuck .brand img{width:48px;height:48px}
+header.is-stuck .brand-sub,header.is-stuck .marquee-logos{display:none}
+@media (max-width:1199.98px){
+  .menu.open{max-height:calc(100vh - var(--hdr-h,200px));overflow-y:auto}
+}
+@media (max-width:767.98px){header.is-stuck .masthead .search,header.is-stuck .topbar{display:none}}
+@media (prefers-reduced-motion:reduce){header.fx,.masthead .container,.brand img{transition:none}}
+
+/* =================== Concept 3: Sample 2 layout =================== */
+/* Same DBIM Blue tokens, Noto Sans scale and line icons as Concepts 1 and 2. WCAG 2.2 AA: 24px+ targets, visible focus, focus not hidden by the sticky header. */
+
+/* Time bar */
+.c3-timebar{background:var(--surface);border-bottom:1px solid var(--linen);font-size:var(--p2)}
+.c3-timebar .container{display:flex;align-items:center;gap:8px 20px;min-height:40px;flex-wrap:wrap;padding-block:4px}
+.c3-timebar .gov{margin-right:auto}
+.c3-time{display:inline-flex;gap:6px;align-items:center;color:var(--text)}
+.c3-time span{color:var(--muted)}
+.c3-time time{font-weight:600;font-variant-numeric:tabular-nums}
+.c3-timebar .skip-inline{display:inline-flex;align-items:center;min-height:32px;padding:0 8px;color:var(--key-2);font-weight:600}
+@media (max-width:767.98px){.c3-timebar .skip-inline{display:none}.c3-time span{display:none}}
+
+/* Masthead tools: search, language, accessibility */
+.c3-tools{display:flex;align-items:center;gap:10px;flex:0 1 auto;min-width:0}
+.c3-tools .search{flex:0 1 340px}
+.c3-tool{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;min-width:44px;padding:0 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--text);font-weight:600;font-size:var(--p2)}
+.c3-tool:hover{border-color:var(--key-2);color:var(--key-2)}
+.c3-tool[aria-expanded="true"]{background:var(--key);border-color:var(--key);color:#fff}
+.c3-tool .chev{width:16px;height:16px}
+.c3-lang{position:relative}
+.c3-lang-menu{position:absolute;right:0;top:calc(100% + 6px);min-width:160px;background:var(--bg);border:1px solid var(--linen);border-radius:8px;box-shadow:0 10px 24px rgba(21,2,2,.14);padding:6px;z-index:70}
+.c3-lang-menu button{width:100%;min-height:40px;text-align:left;padding:8px 12px;border:0;border-radius:6px;background:none;color:var(--text);font-size:var(--p2)}
+.c3-lang-menu button:hover{background:var(--key-5)}
+.c3-lang-menu button[aria-pressed="true"]{background:var(--key);color:#fff;font-weight:600}
+@media (max-width:767.98px){.c3-tools{flex:1 1 100%}.c3-tools .search{flex:1 1 auto}}
+
+/* White navigation bar (Sample 2) */
+.c3-nav{background:var(--bg);border-top:1px solid var(--linen);border-bottom:1px solid var(--linen)}
+.c3-nav .menu>li>a,.c3-nav .menu>li>button{color:var(--text);font-weight:500}
+.c3-nav .menu>li>a:hover,.c3-nav .menu>li>button:hover,.c3-nav .menu>li>button[aria-expanded="true"]{background:var(--key-5);color:var(--key)}
+.c3-nav .menu>li>a[aria-current="page"]{box-shadow:inset 0 -3px 0 var(--key-2);color:var(--key)}
+.c3-nav .nav-toggle{color:var(--text)}
+.c3-nav :focus-visible{outline-color:var(--text);box-shadow:0 0 0 5px var(--bg)}
+@media (min-width:1200px){.c3-nav .menu{justify-content:space-between;flex-wrap:nowrap}.c3-nav .menu>li>a,.c3-nav .menu>li>button{padding:0 10px}}
+@media (max-width:1199.98px){.c3-nav .menu>li>a,.c3-nav .menu>li>button{border-top:1px solid var(--linen)}.c3-nav .submenu{border-left-color:var(--key-2)}}
+
+/* Hero */
+.c3-hero{padding-top:24px}
+.c3-hero .carousel{aspect-ratio:3/1;border-radius:8px}
+.c3-hero .slide figcaption{font-size:var(--p2);padding:48px 24px 64px;max-width:100%}
+@media (max-width:767.98px){.c3-hero .carousel{aspect-ratio:4/3}}
+/* WCAG 2.2 target size: 24px dot buttons with a 12px visual dot */
+.c3-hero .dots button{position:relative;width:24px;height:24px;min-width:24px;border:0;background:transparent;border-radius:50%}
+.c3-hero .dots button::before{content:"";position:absolute;left:6px;top:6px;width:12px;height:12px;border-radius:50%;border:2px solid #fff;box-sizing:border-box}
+.c3-hero .dots button[aria-current="true"]::before{background:#fff}
+
+/* Highlight strip */
+.c3-strip-wrap{padding-top:20px}
+.c3-strip{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:16px 20px;border-radius:8px;background:linear-gradient(90deg,var(--key) 0%,var(--key-2) 100%);color:#fff}
+.c3-strip-icon{width:56px;height:56px;border-radius:50%;background:#fff;color:var(--key);display:flex;align-items:center;justify-content:center;flex:none}
+.c3-strip-text{flex:1 1 320px;min-width:0}
+.c3-strip-text h2{color:#fff;font-size:var(--h3)}
+.c3-strip-text p{font-size:var(--p2);color:#fff}
+
+/* Row 1 */
+.c3-h{font-size:var(--h3);font-weight:600}
+.c3-box{height:100%;padding:20px;border:1px solid var(--linen);border-radius:8px;background:var(--bg)}
+.c3-bullets{display:flex;flex-direction:column;gap:12px}
+.c3-bullets li{position:relative;padding-left:18px;font-size:var(--p2)}
+.c3-bullets li::before{content:"";position:absolute;left:2px;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--key-2)}
+.c3-bullets a{text-decoration:none}
+.c3-bullets a:hover{text-decoration:underline}
+.c3-quick{height:100%;display:flex;flex-direction:column;gap:10px}
+.c3-quick a{flex:1;display:flex;align-items:center;gap:14px;min-height:56px;padding:10px 16px;border-radius:8px;background:var(--key-2);color:#fff;text-decoration:none;font-size:var(--p2);font-weight:500}
+.c3-quick a:hover{background:var(--key);color:#fff}
+.c3-quick :focus-visible{outline-color:var(--text)}
+.c3-qi{width:36px;height:36px;border-radius:50%;background:#fff;color:var(--key);display:flex;align-items:center;justify-content:center;flex:none}
+.c3-qi .icon{width:20px;height:20px}
+.c3-chair{height:100%;display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;align-items:center;padding:20px;border-radius:8px;background:var(--surface)}
+.c3-chair img{width:120px;height:120px;object-fit:cover;border-radius:8px;background:#fff}
+.c3-chair-role{font-size:var(--p2);font-weight:500;color:var(--muted)}
+.c3-chair-name{font-size:var(--p1);font-weight:700;margin:2px 0 6px}
+.c3-chair-note{grid-column:1/-1;font-size:var(--p2);color:var(--text)}
+
+/* Row 2: tabs + updates */
+.c3-row2{border-top:1px solid var(--linen)}
+.c3-tabpanels{display:grid;margin-top:16px}
+.c3-tabpanels>.c3-panel{grid-area:1/1}
+.c3-panel.is-inactive{visibility:hidden}
+.c3-post{display:flex;flex-direction:column;border:1px solid var(--linen);border-radius:8px;overflow:hidden;background:var(--bg)}
+.c3-post img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.c3-post-body{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.c3-post-body h3{font-size:var(--p1);font-weight:600}
+.c3-post-body p{font-size:var(--p2)}
+.c3-post-body a{margin-top:auto;font-size:var(--p2);font-weight:600}
+.c3-post-meta{color:var(--muted);font-size:var(--small)!important}
+.c3-lko-addr{font-size:var(--p2);color:var(--muted);margin-bottom:12px}
+.c3-docs{display:flex;flex-direction:column;gap:4px}
+.c3-docs li{display:flex;gap:12px;align-items:center;padding:12px;border:1px solid var(--linen);border-radius:8px;font-size:var(--p2)}
+.c3-docs .icon{color:var(--key-2);flex:none}
+.c3-updates h2{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.c3-updates ul{display:flex;flex-direction:column;margin-bottom:12px}
+.c3-updates li{padding:12px 0;border-bottom:1px solid var(--key-4);font-size:var(--p2)}
+.c3-updates li a{color:var(--text);text-decoration:none;display:block}
+.c3-updates li a:hover{color:var(--key-2);text-decoration:underline}
+.c3-meta{display:block;margin-top:4px;font-size:var(--small);color:var(--muted)}
+
+/* Split promo */
+.c3-promo{padding-block:48px}
+.c3-promo-grid{align-items:center}
+.c3-promo-text{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.c3-promo-kicker{font-size:var(--h3);color:var(--text)}
+.c3-promo-title{font-size:var(--h1);font-weight:700;letter-spacing:.04em;color:var(--key-2);line-height:1.1}
+.c3-promo-sub{font-size:var(--h3);font-weight:500;color:var(--key)}
+.c3-promo-line{font-size:var(--p1)}
+.c3-promo-note{font-size:var(--p2);color:var(--muted)}
+.c3-promo-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.c3-promo-img{width:100%;border-radius:8px;aspect-ratio:3/2;object-fit:cover}
+
+/* Gallery + programmes */
+.c3-soft{background:var(--surface);border-color:transparent;height:100%}
+.c3-mh{font-size:var(--p1);font-weight:600;margin-bottom:2px}
+
+/* Dark contrast */
+body.hc .c3-strip,body.hc .c3-quick a{background:#000;border:1px solid #FFF}
+body.hc .c3-qi,body.hc .c3-strip-icon{background:#FFE066;color:#000}
+body.hc .c3-nav .menu>li>a,body.hc .c3-nav .menu>li>button{color:#FFF}
+body.hc .c3-promo-title,body.hc .c3-promo-sub{color:#FFE066}
+@media (max-width:767.98px){header.is-stuck .c3-timebar,header.is-stuck .c3-tools{display:none}}
+/* WCAG 2.2 (2.5.8): standalone text links at least 24px tall */
+.view-all,.c3-post-body a,.more,.f-links a,.c3-chair a,.media-list a{display:inline-flex;align-items:center;min-height:24px}
+.c3-updates li a{min-height:24px}
+
+/* Leadership: photo left, name / designation / link right */
+.c3-leaders{height:100%;padding:16px 20px;border-radius:8px;background:var(--surface)}
+.c3-people{display:flex;flex-direction:column;justify-content:space-between;gap:12px;height:100%}
+.c3-person{display:flex;align-items:center;gap:14px;text-align:left}
+.c3-person+.c3-person{padding-top:12px;border-top:1px solid var(--linen)}
+.c3-person img{width:72px;height:72px;flex:none;object-fit:cover;border-radius:8px;background:#fff}
+.c3-person-text{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.c3-person-name{font-size:.875rem;font-weight:700;line-height:1.35;color:var(--text)}
+.c3-person-role{font-size:.875rem;font-weight:400;color:var(--muted)}
+.c3-person-link{display:inline-flex;align-items:center;min-height:24px;font-size:.875rem;font-weight:600;color:var(--key-2);text-decoration:underline;text-underline-offset:3px}
+.c3-person-link:hover{color:var(--key)}
+
+/* Important Updates matches the height of the Events / Academic Centre column (desktop) */
+@media (min-width:992px){
+  .c3-row2 aside{position:relative}
+  .c3-row2 .c3-updates{position:absolute;inset:0;display:flex;flex-direction:column}
+  .c3-upd-list{flex:1;min-height:0;overflow-y:auto;padding-right:6px}
+}
+.c3-updates .view-all{margin-top:auto;align-self:flex-start}
+
+/* Partner logos without links */
+.logos .logo-tile{display:flex;align-items:center;justify-content:center;min-height:84px;padding:10px;background:#fff;border:1px solid var(--linen);border-radius:var(--radius)}
+
+/* Decorative chevrons in the menu (no dropdowns) */
+.c3-nav .menu .chev{pointer-events:none;width:16px;height:16px}
+.c3-nav .menu>li>a{gap:6px}
+.c3-hero .slide{margin:0}
+</style>
+
+<!-- Line icon set (DBIM Style 1: line icons, 24px frame with 2px padding, key colour / white on dark) -->
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-access" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5 12 10l7-1.5M12 10v4.5M12 14.5 9 21M12 14.5l3 6.5"/></symbol>
+  <symbol id="i-contrast" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17a8.5 8.5 0 0 0 0-17z" fill="currentColor"/></symbol>
+  <symbol id="i-lang" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.6 3.6 5.4 3.6 8.5s-1.1 5.9-3.6 8.5c-2.5-2.6-3.6-5.4-3.6-8.5s1.1-5.9 3.6-8.5z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 0 4 20.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 1 1.5 1.5z"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="m2.5 9 9.5-4.5L21.5 9 12 13.5z"/><path d="M6.5 11v4.5c1.5 1.5 3.4 2.2 5.5 2.2s4-.7 5.5-2.2V11M21.5 9v5"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c.4-3.6 2.6-5.6 6-5.6s5.6 2 6 5.6"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.4c2.6.3 4.2 2 4.5 5"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M5 4h14v4H5zM7 8v10a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V8M10 12h4"/></symbol>
+  <symbol id="i-journal" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M9 7h6M9 11h6M9 15h3"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 9h16l-1.2-4.5H5.2zM5 9v11h14V9M9.5 20v-5h5v5"/></symbol>
+  <symbol id="i-portal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M8 21h8M12 17v4M8 10.5l2.5 2.5 5-5"/></symbol>
+  <symbol id="i-gov" viewBox="0 0 24 24"><path d="M3 9.5 12 4l9 5.5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20.5h18"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.6v.1"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3.5l1.7 4.3-2.2 1.4a11 11 0 0 0 6.3 6.3l1.4-2.2L20 15.5V19a1 1 0 0 1-1 1A15 15 0 0 1 4 5a1 1 0 0 1 1-1z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-photo" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><circle cx="9" cy="10" r="1.8"/><path d="m21 16-5-5-8 8"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14.5 8H17V4.5h-2.5A4 4 0 0 0 10.5 8.5V11H8v3.5h2.5V21H14v-6.5h2.6l.4-3.5h-3V9a1 1 0 0 1 1-1z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M4.5 4h4l11 16h-4zM19.5 4l-6.4 7.3M4.5 20l6.4-7.3"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"/><path d="m10 9.2 5 2.8-5 2.8z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><path d="M17.2 6.8v.1"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-darkc" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="1.5" stroke-width="2.2"/><circle cx="12" cy="12" r="3.6" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-invert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" stroke-width="2.2"/><path d="M12 3.5a8.5 8.5 0 0 0 0 17z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-sat" viewBox="0 0 24 24"><path d="M12 3c3.5 4.4 6 7.7 6 11a6 6 0 0 1-12 0c0-3.3 2.5-6.6 6-11z" stroke-width="2.2"/><path d="M12 3c3.5 4.4 6 7.7 6 11a6 6 0 0 1-6 6z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-tplus" viewBox="0 0 24 24"><path d="M2.5 19 8 5h1.2l5.5 14M4.6 14h7.8M18.5 7v6M15.5 10h6" stroke-width="2.2"/></symbol>
+  <symbol id="i-tminus" viewBox="0 0 24 24"><path d="M2.5 19 8 5h1.2l5.5 14M4.6 14h7.8M15.5 10h6" stroke-width="2.2"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 8H7a4 4 0 0 0 0 8h3M14 8h3a4 4 0 0 1 0 8h-3M8.5 12h7" stroke-width="2.2"/></symbol>
+  <symbol id="i-noimg" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1" stroke-width="2.2"/><path d="m7 17 3.5-4 2.5 3 1.5-1.5L17 17M3 3l18 18" stroke-width="2.2"/></symbol>
+  <symbol id="i-cursor" viewBox="0 0 24 24"><path d="M11 10.5 20 14l-3.8 1.4L19.5 19l-1.5 1.5-3.3-3.4-1.4 3.9z" fill="currentColor"/><path d="M12 2.5V5M6.5 5l1.6 1.6M17.5 5l-1.6 1.6M4.5 10.5H7M6.5 16l1.6-1.6" stroke-width="2"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="fx">
+  <!-- Time bar (Sample 2) with parent ministry lineage (DBIM 5.4) -->
+  <div class="c3-timebar">
+    <div class="container">
+      <span class="gov">
+        <svg class="flag" viewBox="0 0 30 20" role="img" aria-label="National flag of India"><rect width="30" height="20" fill="#FF9933"/><rect y="6.67" width="30" height="6.67" fill="#FFFFFF"/><rect y="13.33" width="30" height="6.67" fill="#138808"/><circle cx="15" cy="10" r="2.6" fill="none" stroke="#000080" stroke-width=".7"/></svg>
+        <span>Ministry of Education, Government of India</span>
+      </span>
+      <span class="c3-time"><span>India (IST)</span> <time id="c3Clock" data-no-i18n></time></span>
+      <a class="skip-inline" href="#main">Skip to main content</a>
+    </div>
+  </div>
+
+  <!-- Masthead: logo lockup, search, language, accessibility -->
+  <div class="masthead">
+    <div class="container">
+      <a class="brand" href="#" aria-label="Indian Council of Philosophical Research, home">
+        <img src="assets/img/icpr-logo.webp" width="72" height="72" alt="">
+        <span class="brand-text">
+          <span class="brand-hi" lang="hi" data-no-i18n>भारतीय दार्शनिक अनुसंधान परिषद्</span>
+          <span class="brand-en" data-no-i18n>Indian Council of Philosophical Research</span>
+          <span class="brand-sub">An autonomous body under the Ministry of Education, Government of India</span>
+        </span>
+      </a>
+      <div class="c3-tools">
+        <form class="search" role="search" id="siteSearch">
+          <label for="q" class="sr-only">Search this website</label>
+          <input id="q" name="q" type="search" placeholder="Search fellowships, journals, notices">
+          <button type="submit"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><span class="sr-only">Search</span></button>
+        </form>
+        <div class="c3-lang">
+          <button type="button" class="c3-tool" id="langBtn" aria-expanded="false" aria-controls="langMenu" data-no-i18n>
+            <svg class="icon" aria-hidden="true"><use href="#i-lang"/></svg><span id="langCur">EN</span><span class="sr-only" id="langSr">Language: English</span><svg class="icon chev" aria-hidden="true"><use href="#i-chev"/></svg>
+          </button>
+          <ul class="c3-lang-menu" id="langMenu" hidden data-no-i18n>
+            <li><button type="button" class="lang-btn" data-lang="en" lang="en" aria-pressed="true">English</button></li>
+            <li><button type="button" class="lang-btn" data-lang="hi" lang="hi" aria-pressed="false">हिंदी</button></li>
+          </ul>
+        </div>
+        <button type="button" class="c3-tool" id="a11yBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="a11yPanel" title="Accessibility Controls"><svg class="icon" aria-hidden="true"><use href="#i-access"/></svg><span class="sr-only">Accessibility Controls</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global navigation (white bar with dropdowns, as in Sample 2) -->
+  <nav class="nav c3-nav" aria-label="Main">
+    <div class="container">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>Menu</button>
+      <ul class="menu" id="menu">
+        <li><a href="#" aria-current="page">Home</a></li>
+        <li><a href="#">About ICPR<svg class="icon chev" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></a></li>
+        <li><a href="#">Research<svg class="icon chev" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></a></li>
+        <li><a href="#">Grants &amp; Fellowships<svg class="icon chev" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></a></li>
+        <li><a href="#">Recruitment<svg class="icon chev" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></a></li>
+        <li><a href="#">Publications<svg class="icon chev" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></a></li>
+        <li><a href="#">News &amp; Events<svg class="icon chev" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></a></li>
+        <li><a href="#">Complaints</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main" class="fx" tabindex="-1">
+  <h1 class="sr-only">Indian Council of Philosophical Research</h1>
+
+  <!-- 1. Hero carousel with caption (1800 x 600) -->
+  <section class="container c3-hero" aria-label="Highlights">
+    <div class="carousel" id="carousel" role="region" aria-roledescription="carousel" aria-label="ICPR programme highlights">
+      <figure class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 5">
+        <img src="assets/img/c2-slide-1.webp" width="1800" height="600" alt="ICPR scholars and dignitaries on stage at the Fellows' Meet 2025-26 with the Council's banner">
+        <figcaption>Fellows' Meet (Adhyeta Samagam) 2025-26 brought ICPR fellows and invited scholars together on the theme "Philosophy for Viksit Bharat".</figcaption>
+      </figure>
+      <figure class="slide" role="group" aria-roledescription="slide" aria-label="2 of 5" aria-hidden="true">
+        <img src="assets/img/c2-slide-2.webp" width="1800" height="600" alt="Dignitaries lighting the ceremonial lamp at the inauguration of an ICPR programme" loading="lazy">
+        <figcaption>Lighting of the ceremonial lamp at the inauguration of an ICPR programme in New Delhi.</figcaption>
+      </figure>
+      <figure class="slide" role="group" aria-roledescription="slide" aria-label="3 of 5" aria-hidden="true">
+        <img src="assets/img/c2-slide-3.webp" width="1800" height="600" alt="Panel at the dais of the Fellows' Meet 2025-26 on Philosophy for Viksit Bharat, 15 to 17 March 2026, Greater Noida" loading="lazy">
+        <figcaption>Academic session of the Fellows' Meet 2025-26, 15 to 17 March 2026, Gautam Buddha University, Greater Noida.</figcaption>
+      </figure>
+      <figure class="slide" role="group" aria-roledescription="slide" aria-label="4 of 5" aria-hidden="true">
+        <img src="assets/img/c2-slide-4.webp" width="1800" height="600" alt="Group photograph of participants of an ICPR academic programme" loading="lazy">
+        <figcaption>Participants of an ICPR academic programme.</figcaption>
+      </figure>
+      <figure class="slide" role="group" aria-roledescription="slide" aria-label="5 of 5" aria-hidden="true">
+        <img src="assets/img/c2-slide-5.webp" width="1800" height="600" alt="A guest being felicitated with a plant at an ICPR programme" loading="lazy">
+        <figcaption>Felicitation of guests at an ICPR programme.</figcaption>
+      </figure>
+      <div class="car-ctrl">
+        <button type="button" id="carPause" aria-label="Pause slide rotation"><svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg></button>
+        <button type="button" id="carPrev" aria-label="Previous slide"><svg class="icon" aria-hidden="true"><use href="#i-prev"/></svg></button>
+        <button type="button" id="carNext" aria-label="Next slide"><svg class="icon" aria-hidden="true"><use href="#i-next"/></svg></button>
+        <div class="dots" id="carDots" role="group" aria-label="Choose slide"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Highlight strip (Sample 2: Smart Board) -->
+  <section class="container c3-strip-wrap" aria-labelledby="c3-store">
+    <div class="c3-strip on-dark">
+      <span class="c3-strip-icon" aria-hidden="true"><svg class="icon icon-32"><use href="#i-store"/></svg></span>
+      <div class="c3-strip-text">
+        <h2 id="c3-store">ICPR Book Store <span class="tag-new">New</span></h2>
+        <p>Explore a wide collection of books, research publications and academic resources published by the Council.</p>
+      </div>
+      <a class="btn btn-light" href="https://store.icpr.in" target="_blank" rel="noopener">Visit Store<span class="sr-only"> (opens in new tab)</span></a>
+    </div>
+  </section>
+
+  <!-- 3. Announcements | quick links | Chairman -->
+  <section class="container section c3-row1">
+    <div class="grid">
+      <div class="lg-4 md-6">
+        <div class="c3-box" aria-labelledby="c3-ann">
+          <div class="section-head"><h2 id="c3-ann" class="c3-h">Important Announcements</h2><a class="view-all" href="#">View all<span class="sr-only"> announcements</span></a></div>
+          <ul class="c3-bullets">
+            <li><a href="#">Result for Periodical Lecture (PL) 2026-27</a></li>
+            <li><a href="#">Result for World Philosophy Day (WPD) 2026</a></li>
+            <li><a href="#">Eligible / not eligible candidates for the post of Member Secretary, ICPR</a></li>
+            <li><a href="#">Launch of the ICPR Book Store: books, research publications and academic resources</a></li>
+            <li><a href="#">Selected list of International Day of Yoga 2026</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lg-4 md-6">
+        <ul class="c3-quick" aria-label="Quick links">
+          <li><a href="https://icpr.formapply.in" target="_blank" rel="noopener"><span class="c3-qi" aria-hidden="true"><svg class="icon"><use href="#i-portal"/></svg></span><span>ICPR Fellowship Registration Portal</span><span class="sr-only"> (opens in new tab)</span></a></li>
+          <li><a href="https://editorialmanager.com/icpr/default.asp" target="_blank" rel="noopener"><span class="c3-qi" aria-hidden="true"><svg class="icon"><use href="#i-journal"/></svg></span><span>Submit an Article to JICPR</span><span class="sr-only"> (opens in new tab)</span></a></li>
+          <li><a href="#"><span class="c3-qi" aria-hidden="true"><svg class="icon"><use href="#i-phone"/></svg></span><span>General enquiry: <b>011-2990 1516</b></span></a></li>
+          <li><a href="#"><span class="c3-qi" aria-hidden="true"><svg class="icon"><use href="#i-doc"/></svg></span><span>Application &amp; Formats / Downloads</span></a></li>
+        </ul>
+      </div>
+      <div class="lg-4 md-12">
+        <section class="c3-leaders" aria-labelledby="c3-lead">
+          <h2 id="c3-lead" class="sr-only">Leadership</h2>
+          <ul class="c3-people">
+            <li class="c3-person">
+              <img src="assets/img/c2-lead-minister.webp" width="560" height="560" alt="Shri Pralhad Joshi">
+              <div class="c3-person-text">
+                <p class="c3-person-name">Shri Pralhad Joshi</p>
+                <p class="c3-person-role">Hon'ble Education Minister</p>
+                <a class="c3-person-link" href="#">View Profile<span class="sr-only"> of Shri Pralhad Joshi</span></a>
+              </div>
+            </li>
+            <li class="c3-person">
+              <img src="assets/img/c2-lead-chairman.webp" width="560" height="560" alt="Prof. Nirmalya Narayan Chakraborty">
+              <div class="c3-person-text">
+                <p class="c3-person-name">Prof. Nirmalya Narayan Chakraborty</p>
+                <p class="c3-person-role">Chairman (Officiating), ICPR</p>
+                <a class="c3-person-link" href="#">View Profile<span class="sr-only"> of Prof. Nirmalya Narayan Chakraborty</span></a>
+              </div>
+            </li>
+            <li class="c3-person">
+              <img src="assets/img/c2-lead-ms.webp" width="560" height="560" alt="Prof. Sachchidanand Mishra">
+              <div class="c3-person-text">
+                <p class="c3-person-name">Prof. Sachchidanand Mishra</p>
+                <p class="c3-person-role">Member-Secretary, ICPR</p>
+                <a class="c3-person-link" href="#">View Profile<span class="sr-only"> of Prof. Sachchidanand Mishra</span></a>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Tabbed updates | Important updates -->
+  <section class="container section c3-row2">
+    <div class="grid">
+      <div class="lg-8">
+        <div class="tablist c3-tabs" role="tablist" aria-label="Updates">
+          <button role="tab" id="t-events" aria-controls="p-events" aria-selected="true" tabindex="0">Events</button>
+          <button role="tab" id="t-lko" aria-controls="p-lko" aria-selected="false" tabindex="-1">Academic Centre, Lucknow</button>
+        </div>
+        <div class="c3-tabpanels">
+          <div class="c3-panel" role="tabpanel" id="p-events" aria-labelledby="t-events" tabindex="0">
+            <div class="grid">
+              <article class="sm-6 c3-post">
+                <img src="assets/img/c3-event-meet.webp" width="640" height="360" alt="Scholars and dignitaries on stage at the Fellows' Meet 2025-26" loading="lazy">
+                <div class="c3-post-body">
+                  <p class="c3-post-meta">15 to 17 March 2026 · Greater Noida</p>
+                  <h3>Fellows' Meet 2025-26</h3>
+                  <p>The Adhyeta Samagam brought ICPR fellows together on the theme "Philosophy for Viksit Bharat".</p>
+                  <a href="#">View Gallery</a>
+                </div>
+              </article>
+              <article class="sm-6 c3-post">
+                <img src="assets/img/c3-event-bhashya.webp" width="640" height="360" alt="Poster of the national seminar Bhashyotsavah" loading="lazy">
+                <div class="c3-post-body">
+                  <p class="c3-post-meta">4–5 August 2025 · Tirupati</p>
+                  <h3>Bhashyotsavah seminar</h3>
+                  <p>A two-day national seminar on ancient and contemporary Sanskrit Bhashyas, organised by the Odisha Chair, National Sanskrit University, Tirupati, with ICPR's financial assistance.</p>
+                  <a href="#">View</a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="c3-panel is-inactive" role="tabpanel" id="p-lko" aria-labelledby="t-lko" tabindex="-1" aria-hidden="true">
+            <p class="c3-lko-addr">3/9, Vipul Khand, Gomti Nagar, Lucknow 226010</p>
+            <ul class="c3-docs">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-doc"/></svg><a href="#">Report of ICPR Academic Centre, Lucknow: major programmes in 2015-16</a></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><a href="#">List of philosophical books in the ICPR Lucknow library</a></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-journal"/></svg><a href="#">List of journals</a></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><a href="#">Online workshop on Vedanta Paribhasha, 10 to 30 January 2022</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <aside class="lg-4" aria-labelledby="c3-upd">
+        <div class="c3-box c3-updates">
+          <h2 id="c3-upd" class="c3-h">Important Updates <span class="tag-new">New</span></h2>
+          <ul class="c3-upd-list" tabindex="0" aria-label="Important updates, scrollable">
+            <li><a href="#">Date extension of lease line</a><span class="c3-meta">Tender</span></li>
+            <li><a href="#">Tender regarding eOffice leased line internet connection</a><span class="c3-meta">Tender</span></li>
+            <li><a href="#">Invitation of applications for the post of Member Secretary</a><span class="c3-meta">Last date: 27.07.2026</span></li>
+            <li><a href="#">Applications for Consultant (Private Secretary) and Consultant (Superintendent) from retired Government servants</a><span class="c3-meta">Recruitment</span></li>
+            <li><a href="#">Selected proposals for Indian Philosophers Day 2026-27</a><span class="c3-meta">Result</span></li>
+          </ul>
+          <a class="view-all" href="#">View all<span class="sr-only"> updates</span></a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 5. Full-width fellowship banner (1800 x 500), text in HTML -->
+  <section class="banner on-dark" aria-labelledby="h-fellow">
+    <img src="assets/img/c3-banner-fellows.webp" width="1800" height="500" alt="" loading="lazy">
+    <div class="container">
+      <div class="banner-body">
+        <span class="eyebrow">Academic Programmes</span>
+        <h2 id="h-fellow">ICPR Fellowship(s) Programme</h2>
+        <p>The Council supports research in philosophy through fellowships at every stage of an academic career. Applications are received through the online ICPR Fellowship Registration Portal.</p>
+        <ul class="chips" aria-label="Fellowship categories">
+          <li>Junior Research Fellowship</li><li>Post-Doctoral Fellowship</li><li>General Fellowship</li><li>Senior Fellowship</li><li>National Fellowship</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-light" href="https://icpr.formapply.in" target="_blank" rel="noopener">Register Now<span class="sr-only"> on the fellowship portal (opens in new tab)</span></a>
+          <a class="btn btn-ghost-light" href="#">View Results<span class="sr-only"> of fellowships</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Split promo (Sample 2: Mann Ki Baat) -->
+  <section class="c3-promo" aria-labelledby="c3-jicpr">
+    <div class="container">
+      <div class="grid c3-promo-grid">
+        <div class="lg-6 c3-promo-text">
+          <p class="c3-promo-kicker">Share your research with the philosophy community in</p>
+          <h2 id="c3-jicpr" class="c3-promo-title">JICPR</h2>
+          <p class="c3-promo-sub">Journal of Indian Council of Philosophical Research</p>
+          <p class="c3-promo-line">Submit papers and articles online through Editorial Manager</p>
+          <p class="c3-promo-note">Content pages from Volume 1 Number 1 to Volume 27 Number 4 are available to view and download.</p>
+          <div class="c3-promo-actions">
+            <a class="btn btn-primary" href="https://editorialmanager.com/icpr/default.asp" target="_blank" rel="noopener">Submit Article<span class="sr-only"> to JICPR (opens in new tab)</span></a>
+            <a class="btn btn-outline" href="#">Content Pages<span class="sr-only"> of JICPR</span></a>
+          </div>
+        </div>
+        <div class="lg-6"><img class="c3-promo-img" src="assets/img/c3-jicpr.webp" width="960" height="640" alt="Dignitaries on stage holding up newly released books at a prize distribution and book release function" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Photo Gallery | Academic Programmes (Sample 2: Albums | Video Gallery) -->
+  <section class="section container">
+    <div class="grid">
+      <div class="lg-6" id="gallery" aria-labelledby="h-gallery">
+        <div class="panel c3-soft">
+          <div class="section-head"><h2 id="h-gallery">Photo Gallery</h2><a class="view-all" href="#">View all<span class="sr-only"> albums</span></a></div>
+          <ul class="media-list">
+            <li><img src="assets/img/g-felicitation.webp" width="480" height="320" alt="Two scholars greeting each other with folded hands on stage at the Fellows' Meet" loading="lazy">
+              <div><p>Fellows' Meet (Adhyeta Samagam) 2025-26: inaugural session, felicitation of guests and presentations by ICPR fellows.</p><a href="#">View<span class="sr-only"> Fellows' Meet album</span></a></div></li>
+            <li><img src="assets/img/g-certificate.webp" width="480" height="320" alt="A fellow receiving a certificate from dignitaries at the Fellows' Meet" loading="lazy">
+              <div><p>Fellows' Meet 2025-26: valedictory session and presentation of certificates to participating fellows.</p><a href="#">View<span class="sr-only"> valedictory session album</span></a></div></li>
+            <li><img src="assets/img/g-meeting.webp" width="480" height="320" alt="Officials standing in a conference room at Darshan Bhawan" loading="lazy">
+              <div><p>Meeting at Darshan Bhawan, ICPR, New Delhi, September 2025.</p><a href="#">View<span class="sr-only"> September 2025 album</span></a></div></li>
+            <li><img src="assets/img/g-lamp.webp" width="480" height="320" alt="Dignitaries lighting the ceremonial lamp at the inauguration of an ICPR programme" loading="lazy">
+              <div><p>Lighting of the ceremonial lamp at an ICPR programme in New Delhi.</p><a href="#">View<span class="sr-only"> inauguration album</span></a></div></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lg-6" aria-labelledby="h-progs">
+        <div class="panel c3-soft">
+          <div class="section-head"><h2 id="h-progs">Academic Programmes</h2><a class="view-all" href="#">View all<span class="sr-only"> programmes</span></a></div>
+          <ul class="media-list">
+            <li><img src="assets/img/p-fellowships.webp" width="480" height="320" alt="" loading="lazy">
+              <div><h3 class="c3-mh">Fellowships</h3><p>Junior Research, Post-Doctoral, General, Senior and National Fellowships</p><a href="#">View<span class="sr-only"> Fellowships</span></a></div></li>
+            <li><img src="assets/img/p-seminars.webp" width="480" height="320" alt="" loading="lazy">
+              <div><h3 class="c3-mh">Seminars &amp; Workshops</h3><p>Support for seminars, workshops, study circles and refresher courses</p><a href="#">View<span class="sr-only"> Seminars &amp; Workshops</span></a></div></li>
+            <li><img src="assets/img/p-lectures.webp" width="480" height="320" alt="" loading="lazy">
+              <div><h3 class="c3-mh">Lecture Programme</h3><p>Periodical Lectures, World Philosophy Day and Indian Philosophers Day</p><a href="#">View<span class="sr-only"> Lecture Programme</span></a></div></li>
+            <li><img src="assets/img/p-projects.webp" width="480" height="320" alt="" loading="lazy">
+              <div><h3 class="c3-mh">Projects &amp; Travel Grant</h3><p>Research projects, translation projects and travel grants for scholars</p><a href="#">View<span class="sr-only"> Projects &amp; Travel Grant</span></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Collage | Notices tabs (Sample 2: Press Release) -->
+  <section class="section container" style="padding-top:0" aria-labelledby="h-notices">
+    <div class="notice-wrap">
+      <div class="grid">
+        <div class="lg-4 md-5">
+          <div class="collage" aria-hidden="true">
+            <img src="assets/img/g-dignitaries.webp" width="480" height="320" alt="" loading="lazy">
+            <img src="assets/img/g-honour.webp" width="480" height="320" alt="" loading="lazy">
+            <img src="assets/img/g-dais.webp" width="480" height="320" alt="" loading="lazy">
+          </div>
+        </div>
+        <div class="lg-8 md-7">
+          <h2 id="h-notices" style="margin-bottom:12px">Notices</h2>
+          <div class="tablist" role="tablist" aria-label="Notice categories">
+            <button role="tab" id="t-res" aria-controls="p-res" aria-selected="true" tabindex="0">Results</button>
+            <button role="tab" id="t-vac" aria-controls="p-vac" aria-selected="false" tabindex="-1">Vacancies</button>
+          </div>
+          <div class="tabpanels">
+            <div class="tabpanel" role="tabpanel" id="p-res" aria-labelledby="t-res" tabindex="0">
+              <ul>
+                <li><a href="#">Results of selection committee meeting held on 22-04-2026 for the post of Programme Officer</a></li>
+                <li><a href="#">ICPR Post-Doctoral Fellowship (PDF) result 2025-26</a></li>
+                <li><a href="#">Result of ICPR JRF 2025-26</a></li>
+                <li><a href="#">Selected proposals for World Philosophy Day 2025</a></li>
+              </ul>
+              <a class="more" href="#">View all results</a>
+            </div>
+            <div class="tabpanel is-inactive" role="tabpanel" id="p-vac" aria-labelledby="t-vac" tabindex="-1" aria-hidden="true">
+              <ul>
+                <li><a href="#">Invitation of applications for the post of Member Secretary</a><div class="meta">Last date: 27.07.2026</div></li>
+                <li><a href="#">Engagement of Consultant Accounts</a><div class="meta">Last date: 12 June 2026</div></li>
+                <li><a href="#">Engagement of UDC (Deputation)</a></li>
+                <li><a href="#">Engagement as Consultant (Hindi Translator) in ICPR</a></li>
+              </ul>
+              <a class="more" href="#">View all vacancies</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section partners container" aria-labelledby="h-partners">
+    <h2 id="h-partners" class="sr-only">Related organisations and initiatives</h2>
+    <div class="logos">
+      <div class="logo-tile"><img src="assets/img/moe.webp" width="120" height="56" alt="Ministry of Education" loading="lazy"></div>
+      <div class="logo-tile"><img src="assets/img/india-gov-in.svg" width="89" height="56" alt="india.gov.in, National Portal of India" loading="lazy"></div>
+      <div class="logo-tile"><img src="assets/img/mygov.svg" width="73" height="56" alt="MyGov citizen engagement platform" loading="lazy"></div>
+      <div class="logo-tile"><img src="assets/img/ugc.webp" width="115" height="56" alt="University Grants Commission" loading="lazy"></div>
+      <div class="logo-tile"><img src="assets/img/icssr.webp" width="77" height="56" alt="Indian Council of Social Science Research" loading="lazy"></div>
+      <div class="logo-tile"><img src="assets/img/ichr.webp" width="90" height="56" alt="Indian Council of Historical Research" loading="lazy"></div>
+      <div class="logo-tile"><img src="assets/img/akam.webp" width="102" height="56" alt="Azadi Ka Amrit Mahotsav" loading="lazy"></div>
+      <div class="logo-tile"><img src="assets/img/g20.webp" width="100" height="56" alt="G20 India: One Earth, One Family, One Future" loading="lazy"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer on-dark fx" id="contact">
+  <div class="container">
+    <div class="grid">
+      <div class="lg-4 md-6">
+        <div class="f-brand">
+          <img src="assets/img/icpr-logo.webp" width="56" height="56" alt="">
+          <div data-no-i18n><b>Indian Council of Philosophical Research</b><span lang="hi">भारतीय दार्शनिक अनुसंधान परिषद्</span></div>
+        </div>
+        <address>Darshan Bhawan, 36, Tughlakabad Institutional Area,<br>Mehrauli-Badarpur Road (near Batra Hospital),<br>New Delhi 110062</address>
+        <div class="f-social" role="group" aria-label="ICPR on social media">
+          <a href="#" aria-label="X"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-fb"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="#i-yt"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg></a>
+        </div>
+      </div>
+      <div class="lg-2 md-3 sm-6">
+        <h2>New Delhi</h2>
+        <dl>
+          <div><dt>Telephone</dt><dd>+91-11-2990 1516<br>2990 1527, 2990 1506</dd></div>
+          <div><dt>Fax</dt><dd>+91-11-2996 4750</dd></div>
+        </dl>
+      </div>
+      <div class="lg-2 md-3 sm-6">
+        <h2>Academic Centre</h2>
+        <dl>
+          <div><dt>Address</dt><dd>3/9, Vipul Khand, Gomti Nagar, Lucknow 226010</dd></div>
+          <div><dt>Telefax</dt><dd>+91-522-239 2636</dd></div>
+        </dl>
+      </div>
+      <nav class="lg-4 md-12" aria-labelledby="h-useful">
+        <h2 id="h-useful">Useful Links</h2>
+        <ul class="f-links">
+          <li><a href="#">Website Policies</a></li>
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Feedback</a></li>
+          <li><a href="#">Related Links</a></li>
+          <li><a href="#">Archives</a></li>
+          <li><a href="#">Right to Information</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#">Screen Reader Access</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="f-bottom">
+      <p>This is the official website of the Indian Council of Philosophical Research (ICPR), an autonomous body fully funded by the Ministry of Education, Government of India.</p>
+      <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+        <span>Last updated on: <span class="updated">26 October 2026</span></span>
+        <a class="govin" href="https://www.india.gov.in" target="_blank" rel="noopener">india.gov.in<span class="sr-only"> National Portal of India (opens in new tab)</span></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="a11y-panel" id="a11yPanel" role="dialog" aria-modal="false" aria-labelledby="a11yTitle" hidden>
+  <div class="a11y-head">
+    <svg class="icon icon-32" aria-hidden="true"><use href="#i-access"/></svg>
+    <h2 id="a11yTitle">Accessibility Controls</h2>
+    <button type="button" class="a11y-close" id="a11yClose" aria-label="Close accessibility controls"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+  </div>
+  <div class="a11y-grid">
+    <button type="button" class="a11y-opt" data-opt="contrast" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-darkc"/></svg><span class="lbl">Dark Contrast</span></button>
+    <button type="button" class="a11y-opt" data-opt="invert" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-invert"/></svg><span class="lbl">Invert</span></button>
+    <button type="button" class="a11y-opt" data-opt="saturation" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-sat"/></svg><span class="lbl">Saturation</span><span class="state" id="satState" data-no-i18n></span></button>
+    <button type="button" class="a11y-opt" data-opt="inc"><svg class="icon" aria-hidden="true"><use href="#i-tplus"/></svg><span class="lbl">Text Size Increase</span></button>
+    <button type="button" class="a11y-opt" data-opt="dec"><svg class="icon" aria-hidden="true"><use href="#i-tminus"/></svg><span class="lbl">Text Size Decrease</span></button>
+    <button type="button" class="a11y-opt" data-opt="links" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-link"/></svg><span class="lbl">Highlight Links</span></button>
+    <button type="button" class="a11y-opt" data-opt="noimg" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-noimg"/></svg><span class="lbl">Hide Images</span></button>
+    <button type="button" class="a11y-opt" data-opt="cursor" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-cursor"/></svg><span class="lbl" id="cursorLbl" data-no-i18n>Default Cursor</span></button>
+  </div>
+  <div class="a11y-foot">
+    <p class="a11y-status" id="a11yStatus" aria-live="polite" data-no-i18n></p>
+    <button type="button" class="btn btn-outline" id="a11yReset">Reset All</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function T(k){ return (window.ICPR_I18N && window.ICPR_I18N.t) ? window.ICPR_I18N.t(k) : k; }
+  window.ICPR_T=T;
+
+  // ---------- Accessibility state ----------
+  var SAT=['off','low','high','gray'];
+  var SAT_LABEL={off:'Off',low:'Low',high:'High',gray:'Greyscale'};
+  var A={contrast:false,invert:false,sat:'off',size:0,links:false,noimg:false,cursor:false};
+  try{var saved=JSON.parse(localStorage.getItem('icpr-a11y')||'null'); if(saved) for(var k in A) if(k in saved) A[k]=saved[k];}catch(e){}
+  var panel=document.getElementById('a11yPanel'), a11yBtn=document.getElementById('a11yBtn'), statusEl=document.getElementById('a11yStatus');
+  function opt(n){return panel.querySelector('[data-opt="'+n+'"]');}
+  function applyA11y(announce){
+    document.body.classList.toggle('hc',A.contrast);
+    root.classList.toggle('a11y-invert',A.invert);
+    root.classList.toggle('a11y-links',A.links);
+    root.classList.toggle('a11y-noimg',A.noimg);
+    root.classList.toggle('a11y-cursor',A.cursor);
+    var f=[]; if(A.invert) f.push('invert(1) hue-rotate(180deg)');
+    if(A.sat==='low') f.push('saturate(0.4)'); if(A.sat==='high') f.push('saturate(2)'); if(A.sat==='gray') f.push('grayscale(1)');
+    root.style.setProperty('--fx', f.length?f.join(' '):'none');
+    root.style.fontSize=(16+A.size*2)+'px';
+    opt('contrast').setAttribute('aria-pressed',String(A.contrast));
+    opt('invert').setAttribute('aria-pressed',String(A.invert));
+    opt('saturation').setAttribute('aria-pressed',String(A.sat!=='off'));
+    document.getElementById('satState').textContent=A.sat==='off'?'':T(SAT_LABEL[A.sat]);
+    opt('links').setAttribute('aria-pressed',String(A.links));
+    opt('noimg').setAttribute('aria-pressed',String(A.noimg));
+    opt('cursor').setAttribute('aria-pressed',String(A.cursor));
+    document.getElementById('cursorLbl').textContent=T(A.cursor?'Big Cursor':'Default Cursor');
+    opt('inc').disabled=A.size>=4; opt('dec').disabled=A.size<=-2;
+    statusEl.textContent=T('Text size')+': '+Math.round((16+A.size*2)/16*100)+'%';
+    if(announce) statusEl.textContent=announce+'. '+statusEl.textContent;
+    try{localStorage.setItem('icpr-a11y',JSON.stringify(A));}catch(e){}
+  }
+  window.ICPR_applyA11y=applyA11y;
+  function changeSize(d){A.size=Math.max(-2,Math.min(4,A.size+d)); applyA11y();}
+  document.querySelectorAll('[data-fs]').forEach(function(b){b.addEventListener('click',function(){
+    if(b.dataset.fs==='inc') changeSize(1); else if(b.dataset.fs==='dec') changeSize(-1); else {A.size=0; applyA11y();}});});
+  panel.querySelectorAll('.a11y-opt').forEach(function(b){b.addEventListener('click',function(){
+    var o=b.dataset.opt, msg='';
+    if(o==='contrast'){A.contrast=!A.contrast; if(A.contrast) A.invert=false; msg=T('Dark Contrast')+' '+T(A.contrast?'on':'off');}
+    else if(o==='invert'){A.invert=!A.invert; if(A.invert) A.contrast=false; msg=T('Invert')+' '+T(A.invert?'on':'off');}
+    else if(o==='saturation'){A.sat=SAT[(SAT.indexOf(A.sat)+1)%SAT.length]; msg=T('Saturation')+': '+T(SAT_LABEL[A.sat]);}
+    else if(o==='inc'){changeSize(1); return;}
+    else if(o==='dec'){changeSize(-1); return;}
+    else if(o==='links'){A.links=!A.links; msg=T('Highlight Links')+' '+T(A.links?'on':'off');}
+    else if(o==='noimg'){A.noimg=!A.noimg; msg=T('Hide Images')+' '+T(A.noimg?'on':'off');}
+    else if(o==='cursor'){A.cursor=!A.cursor; msg=T(A.cursor?'Big Cursor':'Default Cursor');}
+    applyA11y(msg);});});
+  document.getElementById('a11yReset').addEventListener('click',function(){A={contrast:false,invert:false,sat:'off',size:0,links:false,noimg:false,cursor:false}; applyA11y(T('All settings reset'));});
+  function openPanel(){panel.hidden=false; a11yBtn.setAttribute('aria-expanded','true'); document.getElementById('a11yClose').focus();}
+  function closePanel(ret){panel.hidden=true; a11yBtn.setAttribute('aria-expanded','false'); if(ret) a11yBtn.focus();}
+  a11yBtn.addEventListener('click',function(e){e.stopPropagation(); panel.hidden?openPanel():closePanel(false);});
+  document.getElementById('a11yClose').addEventListener('click',function(){closePanel(true);});
+  panel.addEventListener('keydown',function(e){if(e.key==='Escape'){closePanel(true);}});
+  document.addEventListener('click',function(e){if(!panel.hidden && !panel.contains(e.target) && e.target!==a11yBtn) closePanel(false);});
+  applyA11y();
+
+  // Sticky header: compact state with hysteresis, and anchor offset
+  var hdr=document.querySelector('header.fx');
+  function setHdrH(){document.documentElement.style.setProperty('--hdr-h',hdr.offsetHeight+'px');}
+  function onScroll(){var y=window.scrollY;
+    if(!hdr.classList.contains('is-stuck') && y>140){hdr.classList.add('is-stuck'); setHdrH();}
+    else if(hdr.classList.contains('is-stuck') && y<20){hdr.classList.remove('is-stuck'); setHdrH();}}
+  window.addEventListener('scroll',onScroll,{passive:true}); window.addEventListener('resize',setHdrH); setHdrH(); onScroll();
+
+  // Navigation: mobile toggle + disclosure submenus
+  var toggle=document.querySelector('.nav-toggle'), menu=document.getElementById('menu');
+  toggle.addEventListener('click',function(){var o=menu.classList.toggle('open'); toggle.setAttribute('aria-expanded',String(o));});
+  var subBtns=menu.querySelectorAll('button[aria-controls]');
+  function closeAll(except){subBtns.forEach(function(b){if(b!==except){b.setAttribute('aria-expanded','false'); document.getElementById(b.getAttribute('aria-controls')).hidden=true;}});}
+  subBtns.forEach(function(b){
+    var panel=document.getElementById(b.getAttribute('aria-controls'));
+    b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')!=='true'; closeAll(b); b.setAttribute('aria-expanded',String(o)); panel.hidden=!o;});
+    b.parentElement.addEventListener('keydown',function(e){if(e.key==='Escape' && b.getAttribute('aria-expanded')==='true'){closeAll(); b.focus();}});
+  });
+  document.addEventListener('click',function(e){if(!menu.contains(e.target)) closeAll();});
+  menu.addEventListener('focusout',function(e){ if(window.innerWidth>=992 && !menu.contains(e.relatedTarget)) closeAll(); });
+
+  // Search (prototype)
+  document.getElementById('siteSearch').addEventListener('submit',function(e){e.preventDefault();});
+
+  // Carousel
+  var car=document.getElementById('carousel'), slides=car.querySelectorAll('.slide'), dots=document.getElementById('carDots');
+  var idx=0, timer=null, playing=!window.matchMedia('(prefers-reduced-motion: reduce)').matches, pauseBtn=document.getElementById('carPause');
+  slides.forEach(function(s,i){var d=document.createElement('button'); d.type='button'; d.setAttribute('aria-label',T('Show slide')+' '+(i+1)+' / '+slides.length); if(i===0) d.setAttribute('aria-current','true'); d.addEventListener('click',function(){go(i); stop();}); dots.appendChild(d);});
+  function go(n){idx=(n+slides.length)%slides.length;
+    slides.forEach(function(s,i){var a=i===idx; s.classList.toggle('is-active',a); s.setAttribute('aria-hidden',String(!a));});
+    dots.querySelectorAll('button').forEach(function(d,i){ if(i===idx) d.setAttribute('aria-current','true'); else d.removeAttribute('aria-current');});}
+  function setPauseUi(){pauseBtn.setAttribute('aria-label',T(playing?'Pause slide rotation':'Start slide rotation')); pauseBtn.querySelector('use').setAttribute('href',playing?'#i-pause':'#i-play');}
+  function start(){clearInterval(timer); timer=setInterval(function(){go(idx+1);},6000);}
+  function stop(){playing=false; clearInterval(timer); setPauseUi();}
+  pauseBtn.addEventListener('click',function(){ if(playing){stop();} else {playing=true; start(); setPauseUi();} });
+  document.getElementById('carPrev').addEventListener('click',function(){go(idx-1); stop();});
+  document.getElementById('carNext').addEventListener('click',function(){go(idx+1); stop();});
+  car.addEventListener('mouseenter',function(){clearInterval(timer);});
+  car.addEventListener('mouseleave',function(){if(playing) start();});
+  car.addEventListener('focusin',function(){clearInterval(timer);});
+  car.addEventListener('focusout',function(e){if(playing && !car.contains(e.relatedTarget)) start();});
+  setPauseUi(); if(playing) start();
+  window.ICPR_refreshCarousel=function(){setPauseUi(); dots.querySelectorAll('button').forEach(function(d,i){d.setAttribute('aria-label',T('Show slide')+' '+(i+1)+' / '+slides.length);});};
+
+
+  // Tabs: WAI-ARIA tabs pattern, one tablist at a time; panels share a grid cell so height stays fixed
+  document.querySelectorAll('[role="tablist"]').forEach(function(list){
+    var tabs=[].slice.call(list.querySelectorAll('[role="tab"]'));
+    function sel(t,focus){tabs.forEach(function(x){var on=x===t; x.setAttribute('aria-selected',String(on)); x.tabIndex=on?0:-1;
+      var p=document.getElementById(x.getAttribute('aria-controls')); p.classList.toggle('is-inactive',!on); p.setAttribute('aria-hidden',String(!on)); p.tabIndex=on?0:-1;}); if(focus) t.focus();}
+    tabs.forEach(function(t,i){t.addEventListener('click',function(){sel(t,true);});
+      t.addEventListener('keydown',function(e){var n=null; if(e.key==='ArrowRight') n=tabs[(i+1)%tabs.length]; if(e.key==='ArrowLeft') n=tabs[(i-1+tabs.length)%tabs.length]; if(e.key==='Home') n=tabs[0]; if(e.key==='End') n=tabs[tabs.length-1]; if(n){e.preventDefault(); sel(n,true);}});});
+  });
+
+  // Indian Standard Time clock (updates every 30 s; not announced to screen readers)
+  var clock=document.getElementById('c3Clock');
+  function tick(){var d=new Date(), hi=document.documentElement.lang==='hi';
+    try{clock.textContent=d.toLocaleString(hi?'hi-IN':'en-IN',{timeZone:'Asia/Kolkata',weekday:'long',day:'numeric',month:'long',year:'numeric',hour:'numeric',minute:'2-digit'});}
+    catch(e){clock.textContent=d.toUTCString();}
+    clock.setAttribute('datetime',d.toISOString());}
+  tick(); setInterval(tick,30000);
+
+  // Language dropdown
+  var langBtn=document.getElementById('langBtn'), langMenu=document.getElementById('langMenu');
+  function langUi(){var hi=document.documentElement.lang==='hi';
+    document.getElementById('langCur').textContent=hi?'हिं':'EN';
+    document.getElementById('langSr').textContent=hi?'भाषा: हिंदी':'Language: English'; tick();}
+  function closeLang(ret){langMenu.hidden=true; langBtn.setAttribute('aria-expanded','false'); if(ret) langBtn.focus();}
+  langBtn.addEventListener('click',function(e){e.stopPropagation(); var o=langMenu.hidden; langMenu.hidden=!o; langBtn.setAttribute('aria-expanded',String(o)); if(o) langMenu.querySelector('[aria-pressed="true"]').focus();});
+  langMenu.addEventListener('keydown',function(e){var b=[].slice.call(langMenu.querySelectorAll('button')), i=b.indexOf(document.activeElement);
+    if(e.key==='Escape'){closeLang(true);} if(e.key==='ArrowDown'){e.preventDefault(); b[(i+1)%b.length].focus();} if(e.key==='ArrowUp'){e.preventDefault(); b[(i-1+b.length)%b.length].focus();}});
+  langMenu.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){setTimeout(function(){langUi(); closeLang(true);},0);});});
+  document.addEventListener('click',function(e){if(!langMenu.hidden && !langMenu.contains(e.target)) closeLang(false);});
+  var prevRefresh=window.ICPR_refreshCarousel; window.ICPR_refreshCarousel=function(){if(prevRefresh) prevRefresh(); langUi();};
+})();
+</script>
+
+<script>
+/* Hindi / English language switch. Dictionary keys are the English source strings. */
+(function(){
+  var D={
+"Skip to main content": "मुख्य सामग्री पर जाएँ",
+"Ministry of Education, Government of India": "शिक्षा मंत्रालय, भारत सरकार",
+"Accessibility Controls": "सुगम्यता नियंत्रण",
+"Indian Council of Philosophical Research": "भारतीय दार्शनिक अनुसंधान परिषद्",
+"An autonomous body under the Ministry of Education, Government of India": "शिक्षा मंत्रालय, भारत सरकार के अधीन एक स्वायत्त संस्था",
+"Search this website": "इस वेबसाइट में खोजें",
+"Search": "खोजें",
+"Menu": "मेनू",
+"Home": "मुखपृष्ठ",
+"About Us": "हमारे बारे में",
+"Historical Profile": "ऐतिहासिक परिचय",
+"Profile": "परिचय",
+"MOA of ICPR": "आईसीपीआर का संगम ज्ञापन",
+"ICPR Memorandum of Association & Rules": "आईसीपीआर संगम ज्ञापन एवं नियम",
+"Library": "पुस्तकालय",
+"Telephone Directory": "दूरभाष निर्देशिका",
+"Organisation": "संगठन",
+"Council": "परिषद्",
+"Governing Body": "शासी निकाय",
+"Research Project Committee": "अनुसंधान परियोजना समिति",
+"Finance Committee": "वित्त समिति",
+"Chairman": "अध्यक्ष",
+"Member Secretary": "सदस्य सचिव",
+"Publications": "प्रकाशन",
+"Books (ICPR Book Store)": "पुस्तकें (आईसीपीआर पुस्तक भंडार)",
+"(opens in new tab)": "(नए टैब में खुलता है)",
+"Publication List": "प्रकाशन सूची",
+"New Publication": "नया प्रकाशन",
+"Consolidated Publication List": "समेकित प्रकाशन सूची",
+"A Survey on Study and Research in Philosophy in India": "भारत में दर्शनशास्त्र के अध्ययन एवं अनुसंधान पर एक सर्वेक्षण",
+"Journals": "पत्रिकाएँ",
+"Darshanam": "दर्शनम्",
+"Academic Programmes": "शैक्षणिक कार्यक्रम",
+"Fellowships": "अध्येतावृत्तियाँ",
+"Seminars / Workshops": "संगोष्ठियाँ / कार्यशालाएँ",
+"Lecture Programme": "व्याख्यान कार्यक्रम",
+"Refresher Course": "पुनश्चर्या पाठ्यक्रम",
+"Projects": "परियोजनाएँ",
+"Cultural Exchange Programmes": "सांस्कृतिक आदान-प्रदान कार्यक्रम",
+"Travel Grant": "यात्रा अनुदान",
+"Who is Who": "कौन क्या है",
+"Notices": "सूचनाएँ",
+"Tenders": "निविदाएँ",
+"Schemes": "योजनाएँ",
+"Results": "परिणाम",
+"Vacancies": "रिक्तियाँ",
+"RTI": "सूचना का अधिकार",
+"Downloads": "डाउनलोड",
+"Application & Formats": "आवेदन एवं प्रारूप",
+"Archives": "अभिलेखागार",
+"Old Announcements & Matters": "पुरानी घोषणाएँ एवं विषय",
+"Gallery": "गैलरी",
+"Contact": "संपर्क",
+"Fellows' Meet (Adhyeta Samagam) 2025-26": "अध्येता समागम 2025-26",
+"ICPR fellows and invited scholars at the annual Fellows' Meet": "वार्षिक अध्येता समागम में आईसीपीआर अध्येता एवं आमंत्रित विद्वान",
+"Academic sessions": "शैक्षणिक सत्र",
+"Fellows present their research before a panel of senior philosophers": "अध्येता वरिष्ठ दार्शनिकों के पैनल के समक्ष अपना शोध प्रस्तुत करते हैं",
+"A community of scholars": "विद्वानों का समुदाय",
+"Participants of an ICPR academic programme": "आईसीपीआर के एक शैक्षणिक कार्यक्रम के प्रतिभागी",
+"Inaugural ceremony": "उद्घाटन समारोह",
+"Lighting of the ceremonial lamp at an ICPR programme in New Delhi": "नई दिल्ली में आईसीपीआर के एक कार्यक्रम में दीप प्रज्वलन",
+"Important Links": "महत्वपूर्ण लिंक",
+"View all": "सभी देखें",
+"important links": "महत्वपूर्ण लिंक",
+"ICPR Fellowship Registration Portal": "आईसीपीआर अध्येतावृत्ति पंजीकरण पोर्टल",
+"ICPR Book Store": "आईसीपीआर पुस्तक भंडार",
+"Submit an Article to JICPR": "JICPR में लेख प्रस्तुत करें",
+"Application & Formats / Downloads": "आवेदन एवं प्रारूप / डाउनलोड",
+"Right to Information (RTI)": "सूचना का अधिकार (आरटीआई)",
+"Ministry of Education": "शिक्षा मंत्रालय",
+"University Grants Commission": "विश्वविद्यालय अनुदान आयोग",
+"New": "नया",
+"Explore a wide collection of books, research publications and academic resources published by the Council.": "परिषद् द्वारा प्रकाशित पुस्तकों, शोध प्रकाशनों एवं शैक्षणिक संसाधनों का विस्तृत संग्रह देखें।",
+"Visit Store": "भंडार देखें",
+"Quick access": "त्वरित पहुँच",
+"Junior Research, Post-Doctoral, General, Senior and National Fellowships": "कनिष्ठ शोध, पोस्ट-डॉक्टोरल, सामान्य, वरिष्ठ एवं राष्ट्रीय अध्येतावृत्तियाँ",
+"Seminars & Workshops": "संगोष्ठियाँ एवं कार्यशालाएँ",
+"Support for seminars, workshops, study circles and refresher courses": "संगोष्ठियों, कार्यशालाओं, अध्ययन मंडलों एवं पुनश्चर्या पाठ्यक्रमों हेतु सहायता",
+"ICPR, New Delhi": "आईसीपीआर, नई दिल्ली",
+"General enquiry": "सामान्य पूछताछ",
+"Also 2990 1527, 2990 1506": "साथ ही 2990 1527, 2990 1506",
+"Periodical Lectures, World Philosophy Day and Indian Philosophers Day": "आवधिक व्याख्यान, विश्व दर्शन दिवस एवं भारतीय दार्शनिक दिवस",
+"Projects & Travel Grant": "परियोजनाएँ एवं यात्रा अनुदान",
+"Research projects, translation projects and travel grants for scholars": "विद्वानों हेतु शोध परियोजनाएँ, अनुवाद परियोजनाएँ एवं यात्रा अनुदान",
+"Academic Centre, Lucknow": "शैक्षणिक केंद्र, लखनऊ",
+"Telefax": "टेलीफ़ैक्स",
+"Email": "ईमेल",
+"3/9, Vipul Khand, Gomti Nagar, Lucknow 226010": "3/9, विपुल खंड, गोमती नगर, लखनऊ 226010",
+"Leadership": "नेतृत्व",
+"Shri Pralhad Joshi": "श्री प्रल्हाद जोशी",
+"Hon'ble Education Minister": "माननीय शिक्षा मंत्री",
+"View Profile": "प्रोफ़ाइल देखें",
+"of Shri Pralhad Joshi": "श्री प्रल्हाद जोशी",
+"Prof. Nirmalya Narayan Chakraborty": "प्रो. निर्माल्य नारायण चक्रवर्ती",
+"Chairman (Officiating), ICPR": "अध्यक्ष (कार्यवाहक), आईसीपीआर",
+"of Prof. Nirmalya Narayan Chakraborty": "प्रो. निर्माल्य नारायण चक्रवर्ती",
+"Prof. Sachchidanand Mishra": "प्रो. सच्चिदानंद मिश्र",
+"Member-Secretary, ICPR": "सदस्य-सचिव, आईसीपीआर",
+"of Prof. Sachchidanand Mishra": "प्रो. सच्चिदानंद मिश्र",
+"ICPR Fellowship(s) Programme": "आईसीपीआर अध्येतावृत्ति कार्यक्रम",
+"The Council supports research in philosophy through fellowships at every stage of an academic career. Applications are received through the online ICPR Fellowship Registration Portal.": "परिषद् शैक्षणिक जीवन के प्रत्येक चरण में अध्येतावृत्तियों के माध्यम से दर्शनशास्त्र में शोध को सहायता प्रदान करती है। आवेदन ऑनलाइन आईसीपीआर अध्येतावृत्ति पंजीकरण पोर्टल के माध्यम से प्राप्त किए जाते हैं।",
+"Junior Research Fellowship": "कनिष्ठ शोध अध्येतावृत्ति",
+"Post-Doctoral Fellowship": "पोस्ट-डॉक्टोरल अध्येतावृत्ति",
+"General Fellowship": "सामान्य अध्येतावृत्ति",
+"Senior Fellowship": "वरिष्ठ अध्येतावृत्ति",
+"National Fellowship": "राष्ट्रीय अध्येतावृत्ति",
+"Register Now": "अभी पंजीकरण करें",
+"on the fellowship portal (opens in new tab)": "अध्येतावृत्ति पोर्टल पर (नए टैब में खुलता है)",
+"View Results": "परिणाम देखें",
+"of fellowships": "अध्येतावृत्ति",
+"About ICPR": "आईसीपीआर के बारे में",
+"Read more": "और पढ़ें",
+"about ICPR": "आईसीपीआर के बारे में",
+"The Indian Council of Philosophical Research, set up by the Ministry of Education, Government of India, was registered as a society in March 1977 under the Societies Act, 1860, and started functioning in July 1981 under the Chairmanship of Professor D.P. Chattopadhyaya. The Council has a broad-based membership comprising distinguished philosophers, social scientists, and representatives of the University Grants Commission, Indian Council of Social Science Research, Indian Council of Historical Research, Indian National Science Academy, the Central Government and the Government of Uttar Pradesh.": "शिक्षा मंत्रालय, भारत सरकार द्वारा स्थापित भारतीय दार्शनिक अनुसंधान परिषद् मार्च 1977 में सोसायटी पंजीकरण अधिनियम, 1860 के अंतर्गत एक सोसायटी के रूप में पंजीकृत हुई तथा जुलाई 1981 में प्रोफ़ेसर डी.पी. चट्टोपाध्याय की अध्यक्षता में इसने कार्य करना आरंभ किया। परिषद् की सदस्यता व्यापक है, जिसमें प्रतिष्ठित दार्शनिक, सामाजिक वैज्ञानिक तथा विश्वविद्यालय अनुदान आयोग, भारतीय सामाजिक विज्ञान अनुसंधान परिषद्, भारतीय इतिहास अनुसंधान परिषद्, भारतीय राष्ट्रीय विज्ञान अकादमी, केंद्र सरकार एवं उत्तर प्रदेश सरकार के प्रतिनिधि शामिल हैं।",
+"Registered": "पंजीकरण",
+"March 1977, Societies Act 1860": "मार्च 1977, सोसायटी पंजीकरण अधिनियम 1860",
+"Functioning since": "कार्यारंभ",
+"July 1981": "जुलाई 1981",
+"First Chairman": "प्रथम अध्यक्ष",
+"Prof. D.P. Chattopadhyaya": "प्रो. डी.पी. चट्टोपाध्याय",
+"Main authorities": "प्रमुख प्राधिकरण",
+"Governing Body and Research Project Committee": "शासी निकाय एवं अनुसंधान परियोजना समिति",
+"Transparency Audit: Council meeting minutes": "पारदर्शिता लेखापरीक्षा: परिषद् बैठकों के कार्यवृत्त",
+"93rd GB": "93वीं शासी निकाय",
+"92nd GB": "92वीं शासी निकाय",
+"91st GB": "91वीं शासी निकाय",
+"90th GB": "90वीं शासी निकाय",
+"62nd Council": "62वीं परिषद्",
+"36th FC": "36वीं वित्त समिति",
+"35th FC": "35वीं वित्त समिति",
+"34th FC": "34वीं वित्त समिति",
+"33rd FC": "33वीं वित्त समिति",
+"Announcements": "घोषणाएँ",
+"announcements": "घोषणाएँ",
+"Result for Periodical Lecture (PL) 2026-27": "आवधिक व्याख्यान (पीएल) 2026-27 का परिणाम",
+"Result": "परिणाम",
+"Result for World Philosophy Day (WPD) 2026": "विश्व दर्शन दिवस (डब्ल्यूपीडी) 2026 का परिणाम",
+"Invitation of applications for \"Periodical Lecture 2026-27\"": "\"आवधिक व्याख्यान 2026-27\" हेतु आवेदन आमंत्रण",
+"Applications": "आवेदन",
+"Last date: 25 September 2026, 5:00 PM": "अंतिम तिथि: 25 सितंबर 2026, सायं 5:00 बजे",
+"Invitation of applications for \"World Philosophy Day\"": "\"विश्व दर्शन दिवस\" हेतु आवेदन आमंत्रण",
+"Eligible / not eligible candidates for the post of Member Secretary, ICPR": "सदस्य सचिव, आईसीपीआर के पद हेतु पात्र / अपात्र उम्मीदवार",
+"Recruitment": "भर्ती",
+"Walk-in interview: 25.08.2026, 11:00 AM": "वॉक-इन साक्षात्कार: 25.08.2026, पूर्वाह्न 11:00 बजे",
+"Launch of the ICPR Book Store: books, research publications and academic resources": "आईसीपीआर पुस्तक भंडार का शुभारंभ: पुस्तकें, शोध प्रकाशन एवं शैक्षणिक संसाधन",
+"Notice": "सूचना",
+"Applications for Consultant (Private Secretary) and Consultant (Superintendent) from retired Government servants": "सेवानिवृत्त सरकारी कर्मचारियों से परामर्शदाता (निजी सचिव) एवं परामर्शदाता (अधीक्षक) पदों हेतु आवेदन",
+"Extension of last date: selection of Bengali to Hindi translators for Nyaya Darshan (4 volumes) by Fanibhushan Tarkavagish": "अंतिम तिथि में विस्तार: फणिभूषण तर्कवागीश कृत न्याय दर्शन (4 खंड) हेतु बांग्ला से हिंदी अनुवादकों का चयन",
+"Up to 23.06.2026": "23.06.2026 तक",
+"Selected list of International Day of Yoga 2026": "अंतरराष्ट्रीय योग दिवस 2026 की चयनित सूची",
+"Selected proposals for Indian Philosophers Day 2026-27": "भारतीय दार्शनिक दिवस 2026-27 हेतु चयनित प्रस्ताव",
+"Photo Gallery": "फ़ोटो गैलरी",
+"albums": "एल्बम",
+"Fellows' Meet (Adhyeta Samagam) 2025-26: inaugural session, felicitation of guests and presentations by ICPR fellows.": "अध्येता समागम 2025-26: उद्घाटन सत्र, अतिथियों का अभिनंदन एवं आईसीपीआर अध्येताओं की प्रस्तुतियाँ।",
+"Album": "एल्बम",
+"View": "देखें",
+"Fellows' Meet album": "अध्येता समागम एल्बम",
+"Fellows' Meet 2025-26: valedictory session and presentation of certificates to participating fellows.": "अध्येता समागम 2025-26: समापन सत्र एवं प्रतिभागी अध्येताओं को प्रमाण-पत्र वितरण।",
+"valedictory session album": "समापन सत्र एल्बम",
+"Bhashyotsavah: a two-day national seminar on ancient and contemporary Sanskrit Bhashyas, 4–5 August 2025, organised by the Odisha Chair, National Sanskrit University, Tirupati, with ICPR's financial assistance.": "भाष्योत्सवः: प्राचीन एवं समकालीन संस्कृत भाष्यों पर दो दिवसीय राष्ट्रीय संगोष्ठी, 4–5 अगस्त 2025, ओडिशा चेयर, राष्ट्रीय संस्कृत विश्वविद्यालय, तिरुपति द्वारा आईसीपीआर की वित्तीय सहायता से आयोजित।",
+"Programme": "कार्यक्रम",
+"Bhashyotsavah seminar": "भाष्योत्सवः संगोष्ठी",
+"Meeting at Darshan Bhawan, ICPR, New Delhi, September 2025.": "दर्शन भवन, आईसीपीआर, नई दिल्ली में बैठक, सितंबर 2025।",
+"September 2025 album": "सितंबर 2025 एल्बम",
+"Journals & Publications": "पत्रिकाएँ एवं प्रकाशन",
+"publications": "प्रकाशन",
+"Journal of Indian Council of Philosophical Research (JICPR)": "भारतीय दार्शनिक अनुसंधान परिषद् की पत्रिका (JICPR)",
+"Content pages from Volume 1 Number 1 to Volume 27 Number 4 are available to view and download.": "खंड 1 अंक 1 से खंड 27 अंक 4 तक के विषय-सूची पृष्ठ देखने एवं डाउनलोड करने हेतु उपलब्ध हैं।",
+"Submit Article": "लेख प्रस्तुत करें",
+"to JICPR (opens in new tab)": "JICPR में (नए टैब में खुलता है)",
+"Content Pages": "विषय-सूची पृष्ठ",
+"of JICPR": "JICPR",
+"The Council's journal of philosophy.": "परिषद् की दर्शनशास्त्र पत्रिका।",
+"View Issues": "अंक देखें",
+"of Darshanam": "दर्शनम्",
+"Books": "पुस्तकें",
+"New publications, the publication list and the consolidated publication list of the Council.": "परिषद् के नए प्रकाशन, प्रकाशन सूची एवं समेकित प्रकाशन सूची।",
+"New Publications": "नए प्रकाशन",
+"A Council survey of philosophy teaching and research across Indian institutions.": "भारतीय संस्थानों में दर्शनशास्त्र के शिक्षण एवं अनुसंधान पर परिषद् का सर्वेक्षण।",
+"Read Survey": "सर्वेक्षण पढ़ें",
+"Date extension of lease line": "लीज़ लाइन की तिथि में विस्तार",
+"Tender regarding eOffice leased line internet connection": "ई-ऑफ़िस लीज़्ड लाइन इंटरनेट कनेक्शन हेतु निविदा",
+"Tender notice for typesetting of 15,000-page manuscript, Bhartiya Darshan Brihatkosh": "भारतीय दर्शन बृहत्कोश की 15,000 पृष्ठों की पांडुलिपि के टाइपसेटिंग हेतु निविदा सूचना",
+"Last date: 10 June 2026, 5:00 PM (hard copy)": "अंतिम तिथि: 10 जून 2026, सायं 5:00 बजे (हार्ड कॉपी)",
+"Inviting quotations for book keeping and drafting financials for F.Y. 2025-26": "वित्त वर्ष 2025-26 हेतु बहीखाता एवं वित्तीय विवरण तैयार करने के लिए कोटेशन आमंत्रित",
+"Inviting quotations for hiring vehicle in ICPR": "आईसीपीआर में वाहन किराये पर लेने हेतु कोटेशन आमंत्रित",
+"Last date: 26.12.2025": "अंतिम तिथि: 26.12.2025",
+"View all tenders": "सभी निविदाएँ देखें",
+"Invitation of applications for the post of Member Secretary": "सदस्य सचिव के पद हेतु आवेदन आमंत्रण",
+"Last date: 27.07.2026": "अंतिम तिथि: 27.07.2026",
+"Engagement of Consultant Accounts": "परामर्शदाता (लेखा) की नियुक्ति",
+"Last date: 12 June 2026": "अंतिम तिथि: 12 जून 2026",
+"Engagement of UDC (Deputation)": "उच्च श्रेणी लिपिक (प्रतिनियुक्ति) की नियुक्ति",
+"Engagement as Consultant (Hindi Translator) in ICPR": "आईसीपीआर में परामर्शदाता (हिंदी अनुवादक) की नियुक्ति",
+"Advertisement for selection of Bengali to English translator for Nyaya Darshan (5 volumes)": "न्याय दर्शन (5 खंड) हेतु बांग्ला से अंग्रेज़ी अनुवादक के चयन का विज्ञापन",
+"Last date: 13 May 2026, 5:00 PM": "अंतिम तिथि: 13 मई 2026, सायं 5:00 बजे",
+"View all vacancies": "सभी रिक्तियाँ देखें",
+"Results of selection committee meeting held on 22-04-2026 for the post of Programme Officer": "कार्यक्रम अधिकारी के पद हेतु 22-04-2026 को आयोजित चयन समिति बैठक के परिणाम",
+"ICPR Post-Doctoral Fellowship (PDF) result 2025-26": "आईसीपीआर पोस्ट-डॉक्टोरल अध्येतावृत्ति (पीडीएफ) परिणाम 2025-26",
+"Result of ICPR JRF 2025-26": "आईसीपीआर जेआरएफ 2025-26 का परिणाम",
+"Selected proposals for Periodic Lecture 2025": "आवधिक व्याख्यान 2025 हेतु चयनित प्रस्ताव",
+"Selected proposals for World Philosophy Day 2025": "विश्व दर्शन दिवस 2025 हेतु चयनित प्रस्ताव",
+"View all results": "सभी परिणाम देखें",
+"Related organisations and initiatives": "संबंधित संगठन एवं पहल",
+"Darshan Bhawan, 36, Tughlakabad Institutional Area,": "दर्शन भवन, 36, तुगलकाबाद संस्थागत क्षेत्र,",
+"Mehrauli-Badarpur Road (near Batra Hospital),": "महरौली-बदरपुर रोड (बत्रा अस्पताल के निकट),",
+"New Delhi 110062": "नई दिल्ली 110062",
+"New Delhi": "नई दिल्ली",
+"Telephone": "दूरभाष",
+"Fax": "फ़ैक्स",
+"Academic Centre": "शैक्षणिक केंद्र",
+"Address": "पता",
+"Useful Links": "उपयोगी लिंक",
+"Website Policies": "वेबसाइट नीतियाँ",
+"Sitemap": "साइटमैप",
+"Help": "सहायता",
+"Feedback": "प्रतिक्रिया",
+"Related Links": "संबंधित लिंक",
+"Right to Information": "सूचना का अधिकार",
+"Contact Us": "संपर्क करें",
+"Screen Reader Access": "स्क्रीन रीडर एक्सेस",
+"Terms of Use": "उपयोग की शर्तें",
+"This is the official website of the Indian Council of Philosophical Research (ICPR), an autonomous body fully funded by the Ministry of Education, Government of India.": "यह भारतीय दार्शनिक अनुसंधान परिषद् (आईसीपीआर) की आधिकारिक वेबसाइट है, जो शिक्षा मंत्रालय, भारत सरकार द्वारा पूर्णतः वित्तपोषित एक स्वायत्त संस्था है।",
+"Last updated on:": "अंतिम अद्यतन:",
+"23 October 2026": "23 अक्टूबर 2026",
+"National Portal of India (opens in new tab)": "भारत का राष्ट्रीय पोर्टल (नए टैब में खुलता है)",
+"Dark Contrast": "डार्क कंट्रास्ट",
+"Invert": "रंग उलटें",
+"Saturation": "संतृप्ति",
+"Text Size Increase": "टेक्स्ट आकार बढ़ाएँ",
+"Text Size Decrease": "टेक्स्ट आकार घटाएँ",
+"Highlight Links": "लिंक हाइलाइट करें",
+"Hide Images": "चित्र छिपाएँ",
+"Default Cursor": "सामान्य कर्सर",
+"Big Cursor": "बड़ा कर्सर",
+"Text size": "टेक्स्ट आकार",
+"Reset All": "सभी रीसेट करें",
+"All settings reset": "सभी सेटिंग्स रीसेट की गईं",
+"Off": "बंद",
+"Low": "कम",
+"High": "अधिक",
+"Greyscale": "श्वेत-श्याम",
+"on": "चालू",
+"off": "बंद",
+"Close accessibility controls": "सुगम्यता नियंत्रण बंद करें",
+"Show slide": "स्लाइड दिखाएँ",
+"Pause slide rotation": "स्लाइड रोटेशन रोकें",
+"Start slide rotation": "स्लाइड रोटेशन शुरू करें",
+"Previous slide": "पिछली स्लाइड",
+"Next slide": "अगली स्लाइड",
+"Choose slide": "स्लाइड चुनें",
+"National flag of India": "भारत का राष्ट्रीय ध्वज",
+"Accessibility and language controls": "सुगम्यता एवं भाषा नियंत्रण",
+"Decrease text size": "टेक्स्ट आकार घटाएँ",
+"Normal text size": "सामान्य टेक्स्ट आकार",
+"Increase text size": "टेक्स्ट आकार बढ़ाएँ",
+"Indian Council of Philosophical Research, home": "भारतीय दार्शनिक अनुसंधान परिषद्, मुखपृष्ठ",
+"Search fellowships, journals, notices": "अध्येतावृत्ति, पत्रिकाएँ, सूचनाएँ खोजें",
+"ICPR on social media": "सोशल मीडिया पर आईसीपीआर",
+"ICPR on X (opens in new tab)": "एक्स पर आईसीपीआर (नए टैब में खुलता है)",
+"ICPR on Facebook (opens in new tab)": "फ़ेसबुक पर आईसीपीआर (नए टैब में खुलता है)",
+"ICPR on YouTube (opens in new tab)": "यूट्यूब पर आईसीपीआर (नए टैब में खुलता है)",
+"ICPR on Instagram (opens in new tab)": "इंस्टाग्राम पर आईसीपीआर (नए टैब में खुलता है)",
+"X": "एक्स",
+"Facebook": "फ़ेसबुक",
+"YouTube": "यूट्यूब",
+"Instagram": "इंस्टाग्राम",
+"Main": "मुख्य",
+"Highlights": "मुख्य झलकियाँ",
+"ICPR programme highlights": "आईसीपीआर कार्यक्रमों की झलकियाँ",
+"1 of 4": "4 में से 1",
+"2 of 4": "4 में से 2",
+"3 of 4": "4 में से 3",
+"4 of 4": "4 में से 4",
+"Scholars and dignitaries on stage in front of the Fellows' Meet 2025-26 backdrop, decorated with marigold garlands": "गेंदे की मालाओं से सजे अध्येता समागम 2025-26 के मंच पर विद्वान एवं गणमान्य व्यक्ति",
+"Speakers seated at the dais during an academic session of the Fellows' Meet": "अध्येता समागम के एक शैक्षणिक सत्र के दौरान मंच पर बैठे वक्ता",
+"Group photograph of programme participants in a marble-floored atrium": "संगमरमर के फ़र्श वाले प्रांगण में कार्यक्रम प्रतिभागियों का समूह चित्र",
+"Dignitaries lighting the ceremonial lamp at the inauguration of an ICPR programme": "आईसीपीआर के एक कार्यक्रम के उद्घाटन पर दीप प्रज्वलित करते गणमान्य व्यक्ति",
+"Fellowship categories": "अध्येतावृत्ति श्रेणियाँ",
+"Announcements list, scrollable": "घोषणाओं की सूची, स्क्रॉल करने योग्य",
+"Two scholars greeting each other with folded hands on stage at the Fellows' Meet": "अध्येता समागम के मंच पर हाथ जोड़कर अभिवादन करते दो विद्वान",
+"A fellow receiving a certificate from dignitaries at the Fellows' Meet": "अध्येता समागम में गणमान्य व्यक्तियों से प्रमाण-पत्र प्राप्त करती एक अध्येता",
+"Poster of the two-day national seminar Bhashyotsavah": "दो दिवसीय राष्ट्रीय संगोष्ठी भाष्योत्सवः का पोस्टर",
+"Officials standing in a conference room at Darshan Bhawan": "दर्शन भवन के सम्मेलन कक्ष में खड़े अधिकारी",
+"Notice categories": "सूचना श्रेणियाँ",
+"Ministry of Education (opens in new tab)": "शिक्षा मंत्रालय (नए टैब में खुलता है)",
+"india.gov.in, National Portal of India (opens in new tab)": "india.gov.in, भारत का राष्ट्रीय पोर्टल (नए टैब में खुलता है)",
+"MyGov citizen engagement platform (opens in new tab)": "मायगव नागरिक सहभागिता मंच (नए टैब में खुलता है)",
+"University Grants Commission (opens in new tab)": "विश्वविद्यालय अनुदान आयोग (नए टैब में खुलता है)",
+"Indian Council of Social Science Research (opens in new tab)": "भारतीय सामाजिक विज्ञान अनुसंधान परिषद् (नए टैब में खुलता है)",
+"Indian Council of Historical Research (opens in new tab)": "भारतीय इतिहास अनुसंधान परिषद् (नए टैब में खुलता है)",
+"Azadi Ka Amrit Mahotsav (opens in new tab)": "आज़ादी का अमृत महोत्सव (नए टैब में खुलता है)",
+"G20 India: One Earth, One Family, One Future (opens in new tab)": "जी20 भारत: वसुधैव कुटुम्बकम् – एक पृथ्वी, एक परिवार, एक भविष्य (नए टैब में खुलता है)",
+"ICPR Homepage 2": "आईसीपीआर मुखपृष्ठ 2",
+"Advancing philosophical research in India.": "भारत में दार्शनिक अनुसंधान को आगे बढ़ाना।",
+"One Council, every tradition.": "एक परिषद्, हर परंपरा।",
+"Fellowships, seminars, lectures, research projects and publications for philosophers and scholars at every stage of their work.": "दार्शनिकों एवं विद्वानों के लिए उनके कार्य के हर चरण में अध्येतावृत्तियाँ, संगोष्ठियाँ, व्याख्यान, शोध परियोजनाएँ एवं प्रकाशन।",
+"Apply for Fellowship": "अध्येतावृत्ति हेतु आवेदन करें",
+"Explore Programmes": "कार्यक्रम देखें",
+"Set up by the Ministry of Education, the Council was registered as a society in March 1977 and began functioning in July 1981. It brings together philosophers, social scientists and representatives of national academic bodies to promote research in philosophy.": "शिक्षा मंत्रालय द्वारा स्थापित परिषद् मार्च 1977 में एक सोसायटी के रूप में पंजीकृत हुई और जुलाई 1981 में इसने कार्य करना आरंभ किया। यह दर्शनशास्त्र में अनुसंधान को बढ़ावा देने के लिए दार्शनिकों, सामाजिक वैज्ञानिकों एवं राष्ट्रीय शैक्षणिक निकायों के प्रतिनिधियों को एक साथ लाती है।",
+"Fellowships for every stage": "शैक्षणिक जीवन के प्रत्येक चरण के लिए अध्येतावृत्तियाँ",
+"of an academic career, from Junior Research to National Fellowship, applied for": "— कनिष्ठ शोध से राष्ट्रीय अध्येतावृत्ति तक, जिनके लिए आवेदन",
+"online in one portal.": "एक ही पोर्टल पर ऑनलाइन होता है।",
+"Registration Portal": "पंजीकरण पोर्टल",
+"Fellows' Meet 2025-26": "अध्येता समागम 2025-26",
+"Awarded on the recommendation of the Council's committees.": "परिषद् की समितियों की अनुशंसा पर प्रदान की जाती हैं।",
+"JRF": "जेआरएफ",
+"PDF": "पीडीएफ",
+"ICPR at a glance": "एक नज़र में आईसीपीआर",
+"Registered as a society": "सोसायटी के रूप में पंजीकरण",
+"Began functioning": "कार्यारंभ",
+"JICPR volumes with content pages online": "ऑनलाइन विषय-सूची पृष्ठों सहित JICPR खंड",
+"Offices: New Delhi and Lucknow": "कार्यालय: नई दिल्ली एवं लखनऊ",
+"Explore the Council's full range of programmes, from fellowships and seminars to lectures, research projects and publications.": "अध्येतावृत्तियों और संगोष्ठियों से लेकर व्याख्यानों, शोध परियोजनाओं एवं प्रकाशनों तक, परिषद् के सभी कार्यक्रम देखें।",
+"Explore More": "और देखें",
+"JRF, Post-Doctoral, General, Senior and National Fellowships": "जेआरएफ, पोस्ट-डॉक्टोरल, सामान्य, वरिष्ठ एवं राष्ट्रीय अध्येतावृत्तियाँ",
+"Seminars": "संगोष्ठियाँ",
+"Seminars, workshops, study circles and refresher courses": "संगोष्ठियाँ, कार्यशालाएँ, अध्ययन मंडल एवं पुनश्चर्या पाठ्यक्रम",
+"Lectures": "व्याख्यान",
+"Research": "अनुसंधान",
+"Research projects, translation projects and travel grants": "शोध परियोजनाएँ, अनुवाद परियोजनाएँ एवं यात्रा अनुदान",
+"Journals & Books": "पत्रिकाएँ एवं पुस्तकें",
+"JICPR, Darshanam and the ICPR Book Store": "JICPR, दर्शनम् एवं आईसीपीआर पुस्तक भंडार",
+"Latest": "नवीनतम",
+"10 notices": "10 सूचनाएँ",
+"View all announcements": "सभी घोषणाएँ देखें",
+"View notices": "सूचनाएँ देखें",
+"Four notice boards. Every announcement in one place.": "चार सूचना पट्ट। हर घोषणा एक ही स्थान पर।",
+"Announcements, tenders, vacancies and results, each with its last date.": "घोषणाएँ, निविदाएँ, रिक्तियाँ एवं परिणाम, प्रत्येक की अंतिम तिथि सहित।",
+"ICPR is an autonomous body fully funded by the Ministry of Education, Government of India.": "आईसीपीआर शिक्षा मंत्रालय, भारत सरकार द्वारा पूर्णतः वित्तपोषित एक स्वायत्त संस्था है।",
+"The Governing Body and the Research Project Committee are the main authorities of the Council.": "शासी निकाय एवं अनुसंधान परियोजना समिति परिषद् के प्रमुख प्राधिकरण हैं।",
+"The Council works from Darshan Bhawan, New Delhi, and its Academic Centre in Lucknow.": "परिषद् दर्शन भवन, नई दिल्ली तथा लखनऊ स्थित अपने शैक्षणिक केंद्र से कार्य करती है।",
+"FAQ": "अक्सर पूछे जाने वाले प्रश्न",
+"We have gathered the questions scholars ask most often, with clear answers and links, so nothing is left unclear.": "हमने विद्वानों द्वारा सबसे अधिक पूछे जाने वाले प्रश्नों को स्पष्ट उत्तरों एवं लिंक के साथ एकत्र किया है, ताकि कुछ भी अस्पष्ट न रहे।",
+"How do I apply for an ICPR fellowship?": "आईसीपीआर अध्येतावृत्ति के लिए आवेदन कैसे करें?",
+"Applications are submitted online through the ICPR Fellowship Registration Portal at icpr.formapply.in. Selection results are published under Notices.": "आवेदन icpr.formapply.in पर आईसीपीआर अध्येतावृत्ति पंजीकरण पोर्टल के माध्यम से ऑनलाइन जमा किए जाते हैं। चयन परिणाम सूचनाओं में प्रकाशित किए जाते हैं।",
+"Which fellowships does ICPR offer?": "आईसीपीआर कौन-सी अध्येतावृत्तियाँ प्रदान करती है?",
+"Junior Research Fellowship, Post-Doctoral Fellowship, General Fellowship, Senior Fellowship and National Fellowship.": "कनिष्ठ शोध अध्येतावृत्ति, पोस्ट-डॉक्टोरल अध्येतावृत्ति, सामान्य अध्येतावृत्ति, वरिष्ठ अध्येतावृत्ति एवं राष्ट्रीय अध्येतावृत्ति।",
+"How do I submit a paper to JICPR?": "JICPR में शोध-पत्र कैसे प्रस्तुत करें?",
+"Papers and articles for the Journal of Indian Council of Philosophical Research are submitted through Editorial Manager at editorialmanager.com/icpr.": "भारतीय दार्शनिक अनुसंधान परिषद् की पत्रिका हेतु शोध-पत्र एवं लेख editorialmanager.com/icpr पर एडिटोरियल मैनेजर के माध्यम से प्रस्तुत किए जाते हैं।",
+"Where can I buy ICPR publications?": "आईसीपीआर के प्रकाशन कहाँ से खरीदें?",
+"Books, research publications and academic resources are available at the ICPR Book Store, store.icpr.in.": "पुस्तकें, शोध प्रकाशन एवं शैक्षणिक संसाधन आईसीपीआर पुस्तक भंडार, store.icpr.in पर उपलब्ध हैं।",
+"Where are the ICPR offices?": "आईसीपीआर के कार्यालय कहाँ हैं?",
+"Darshan Bhawan, 36, Tughlakabad Institutional Area, New Delhi 110062, and the Academic Centre at 3/9, Vipul Khand, Gomti Nagar, Lucknow 226010.": "दर्शन भवन, 36, तुगलकाबाद संस्थागत क्षेत्र, नई दिल्ली 110062, तथा शैक्षणिक केंद्र, 3/9, विपुल खंड, गोमती नगर, लखनऊ 226010।",
+"Where can I find tenders and vacancies?": "निविदाएँ एवं रिक्तियाँ कहाँ देखें?",
+"Open the Notices menu for Tenders, Vacancies and Results. Each notice shows its last date.": "निविदाओं, रिक्तियों एवं परिणामों के लिए सूचनाएँ मेनू खोलें। प्रत्येक सूचना में उसकी अंतिम तिथि दी गई है।",
+"Still have some questions?": "अब भी कोई प्रश्न है?",
+"Stay Updated": "अद्यतन रहें",
+"Get ICPR notices in your inbox": "आईसीपीआर की सूचनाएँ अपने ईमेल पर पाएँ",
+"Email address": "ईमेल पता",
+"Enter your email address": "अपना ईमेल पता दर्ज करें",
+"Subscribe": "सदस्यता लें",
+"Subscription will be active on the live website.": "सदस्यता सुविधा लाइव वेबसाइट पर सक्रिय होगी।",
+"Enter a valid email address, for example name@example.com.": "मान्य ईमेल पता दर्ज करें, उदाहरण: name@example.com",
+"Scholars greeting each other with folded hands on stage at the Fellows' Meet 2025-26": "अध्येता समागम 2025-26 के मंच पर हाथ जोड़कर अभिवादन करते विद्वान",
+"Academic programmes, scrollable": "शैक्षणिक कार्यक्रम, स्क्रॉल करने योग्य",
+"A fellow receiving a certificate at the Fellows' Meet": "अध्येता समागम में प्रमाण-पत्र प्राप्त करती एक अध्येता",
+"Open Fellowships": "अध्येतावृत्तियाँ खोलें",
+"Dignitaries seated at the dais of a seminar": "एक संगोष्ठी के मंच पर बैठे गणमान्य व्यक्ति",
+"Open Seminars & Workshops": "संगोष्ठियाँ एवं कार्यशालाएँ खोलें",
+"Speakers at the dais during an academic session": "एक शैक्षणिक सत्र के दौरान मंच पर वक्ता",
+"Open Lecture Programme": "व्याख्यान कार्यक्रम खोलें",
+"Officials in a meeting room at Darshan Bhawan": "दर्शन भवन के बैठक कक्ष में अधिकारी",
+"Open Projects & Travel Grant": "परियोजनाएँ एवं यात्रा अनुदान खोलें",
+"Poster of the national seminar Bhashyotsavah": "राष्ट्रीय संगोष्ठी भाष्योत्सवः का पोस्टर",
+"Open Journals & Books": "पत्रिकाएँ एवं पुस्तकें खोलें",
+"Previous programmes": "पिछले कार्यक्रम",
+"Next programmes": "अगले कार्यक्रम",
+"1 of 3": "3 में से 1",
+"2 of 3": "3 में से 2",
+"3 of 3": "3 में से 3",
+"Previous person": "पिछला व्यक्ति",
+"Next person": "अगला व्यक्ति",
+"Participants of an ICPR academic programme in a group photograph": "आईसीपीआर के एक शैक्षणिक कार्यक्रम के प्रतिभागियों का समूह चित्र",
+"The Indian Council of Philosophical Research set up by the Ministry of Education, Government of India, was registered as a society in March 1977 under the Societies Act, 1860, but it actually started functioning in July 1981 under the Chairmanship of Professor D.P. Chattopadhyaya. The Council has a broad-based membership comprising distinguished philosophers, social scientists, representatives of the University Grants Commission, Indian Council of Social Science Research, Indian Council of Historical Research, Indian National Science Academy, the Central Government and the Government of Uttar Pradesh. The Governing Body (GB) and the Research Project Committee (RPC) are the main authorities of the Council.": "शिक्षा मंत्रालय, भारत सरकार द्वारा स्थापित भारतीय दार्शनिक अनुसंधान परिषद् मार्च 1977 में सोसायटी पंजीकरण अधिनियम, 1860 के अंतर्गत एक सोसायटी के रूप में पंजीकृत हुई, किंतु इसने वास्तविक रूप से जुलाई 1981 में प्रोफ़ेसर डी.पी. चट्टोपाध्याय की अध्यक्षता में कार्य करना आरंभ किया। परिषद् की सदस्यता व्यापक है, जिसमें प्रतिष्ठित दार्शनिक, सामाजिक वैज्ञानिक तथा विश्वविद्यालय अनुदान आयोग, भारतीय सामाजिक विज्ञान अनुसंधान परिषद्, भारतीय इतिहास अनुसंधान परिषद्, भारतीय राष्ट्रीय विज्ञान अकादमी, केंद्र सरकार एवं उत्तर प्रदेश सरकार के प्रतिनिधि शामिल हैं। शासी निकाय (जीबी) एवं अनुसंधान परियोजना समिति (आरपीसी) परिषद् के प्रमुख प्राधिकरण हैं।",
+"The Council publishes all of its official notices here, from invitations for applications and programme results to recruitment and tenders. Each notice shows its last date, and older notices move to the Archives.": "परिषद् अपनी सभी आधिकारिक सूचनाएँ यहाँ प्रकाशित करती है, आवेदन आमंत्रण और कार्यक्रम परिणामों से लेकर भर्ती एवं निविदाओं तक। प्रत्येक सूचना में उसकी अंतिम तिथि दी गई है, और पुरानी सूचनाएँ अभिलेखागार में चली जाती हैं।",
+"Invitations for lectures, seminars and translation projects, and news from the Council": "व्याख्यानों, संगोष्ठियों एवं अनुवाद परियोजनाओं हेतु आमंत्रण तथा परिषद् के समाचार",
+"Quotations, rate contracts, auctions and service contracts": "कोटेशन, दर अनुबंध, नीलामी एवं सेवा अनुबंध",
+"Recruitment, deputation, consultant and internship notices": "भर्ती, प्रतिनियुक्ति, परामर्शदाता एवं इंटर्नशिप सूचनाएँ",
+"Fellowship results and selected proposals for lectures and programmes": "अध्येतावृत्ति परिणाम तथा व्याख्यानों एवं कार्यक्रमों हेतु चयनित प्रस्ताव",
+"Old announcements in Archives": "अभिलेखागार में पुरानी घोषणाएँ",
+"ICPR scholars and dignitaries on stage at the Fellows' Meet 2025-26 with the Council's banner": "परिषद् के बैनर के साथ अध्येता समागम 2025-26 के मंच पर आईसीपीआर के विद्वान एवं गणमान्य व्यक्ति",
+"Panel at the dais of the Fellows' Meet 2025-26 on Philosophy for Viksit Bharat, 15 to 17 March 2026, Greater Noida": "\"विकसित भारत के लिए दर्शन\" विषय पर अध्येता समागम 2025-26 का मंच, 15 से 17 मार्च 2026, ग्रेटर नोएडा",
+"Group photograph of participants of an ICPR academic programme": "आईसीपीआर के एक शैक्षणिक कार्यक्रम के प्रतिभागियों का समूह चित्र",
+"A guest being felicitated with a plant at an ICPR programme": "आईसीपीआर के एक कार्यक्रम में पौधा भेंट कर अतिथि का अभिनंदन",
+"1 of 5": "5 में से 1",
+"2 of 5": "5 में से 2",
+"3 of 5": "5 में से 3",
+"4 of 5": "5 में से 4",
+"5 of 5": "5 में से 5",
+"Fellowships and ICPR at a glance": "अध्येतावृत्तियाँ एवं एक नज़र में आईसीपीआर",
+"Event": "कार्यक्रम",
+"The Adhyeta Samagam brought ICPR fellows together on the theme \"Philosophy for Viksit Bharat\".": "अध्येता समागम में आईसीपीआर के अध्येता \"विकसित भारत के लिए दर्शन\" विषय पर एकत्र हुए।",
+"Dates": "तिथियाँ",
+"15 to 17 March 2026": "15 से 17 मार्च 2026",
+"Venue": "स्थान",
+"Auditorium, Gautam Buddha University, Greater Noida": "सभागार, गौतम बुद्ध विश्वविद्यालय, ग्रेटर नोएडा",
+"View Gallery": "गैलरी देखें",
+"ICPR Homepage 3": "आईसीपीआर मुखपृष्ठ 3",
+"India (IST)": "भारत (आईएसटी)",
+"Fellows' Meet (Adhyeta Samagam) 2025-26 brought ICPR fellows and invited scholars together on the theme \"Philosophy for Viksit Bharat\".": "अध्येता समागम 2025-26 में आईसीपीआर के अध्येता एवं आमंत्रित विद्वान \"विकसित भारत के लिए दर्शन\" विषय पर एकत्र हुए।",
+"Lighting of the ceremonial lamp at the inauguration of an ICPR programme in New Delhi.": "नई दिल्ली में आईसीपीआर के एक कार्यक्रम के उद्घाटन पर दीप प्रज्वलन।",
+"Academic session of the Fellows' Meet 2025-26, 15 to 17 March 2026, Gautam Buddha University, Greater Noida.": "अध्येता समागम 2025-26 का शैक्षणिक सत्र, 15 से 17 मार्च 2026, गौतम बुद्ध विश्वविद्यालय, ग्रेटर नोएडा।",
+"Participants of an ICPR academic programme.": "आईसीपीआर के एक शैक्षणिक कार्यक्रम के प्रतिभागी।",
+"Felicitation of guests at an ICPR programme.": "आईसीपीआर के एक कार्यक्रम में अतिथियों का अभिनंदन।",
+"Important Announcements": "महत्वपूर्ण घोषणाएँ",
+"General enquiry:": "सामान्य पूछताछ:",
+"Chairman (Officiating)": "अध्यक्ष (कार्यवाहक)",
+"Chairman (Officiating) of the Indian Council of Philosophical Research, an autonomous body fully funded by the Ministry of Education, Government of India.": "भारतीय दार्शनिक अनुसंधान परिषद् के अध्यक्ष (कार्यवाहक), जो शिक्षा मंत्रालय, भारत सरकार द्वारा पूर्णतः वित्तपोषित एक स्वायत्त संस्था है।",
+"Events": "कार्यक्रम",
+"15 to 17 March 2026 · Greater Noida": "15 से 17 मार्च 2026 · ग्रेटर नोएडा",
+"4–5 August 2025 · Tirupati": "4–5 अगस्त 2025 · तिरुपति",
+"A two-day national seminar on ancient and contemporary Sanskrit Bhashyas, organised by the Odisha Chair, National Sanskrit University, Tirupati, with ICPR's financial assistance.": "प्राचीन एवं समकालीन संस्कृत भाष्यों पर दो दिवसीय राष्ट्रीय संगोष्ठी, ओडिशा चेयर, राष्ट्रीय संस्कृत विश्वविद्यालय, तिरुपति द्वारा आईसीपीआर की वित्तीय सहायता से आयोजित।",
+"Report of ICPR Academic Centre, Lucknow: major programmes in 2015-16": "आईसीपीआर शैक्षणिक केंद्र, लखनऊ की रिपोर्ट: 2015-16 के प्रमुख कार्यक्रम",
+"List of philosophical books in the ICPR Lucknow library": "आईसीपीआर लखनऊ पुस्तकालय में दर्शनशास्त्र की पुस्तकों की सूची",
+"List of journals": "पत्रिकाओं की सूची",
+"Online workshop on Vedanta Paribhasha, 10 to 30 January 2022": "\"वेदान्त परिभाषा\" पर ऑनलाइन कार्यशाला, 10 से 30 जनवरी 2022",
+"Important Updates": "महत्वपूर्ण अद्यतन",
+"Tender": "निविदा",
+"updates": "अद्यतन",
+"Updates": "अद्यतन",
+"Share your research with the philosophy community in": "दर्शनशास्त्र समुदाय के साथ अपना शोध साझा करें",
+"Journal of Indian Council of Philosophical Research": "भारतीय दार्शनिक अनुसंधान परिषद् की पत्रिका",
+"Submit papers and articles online through Editorial Manager": "एडिटोरियल मैनेजर के माध्यम से शोध-पत्र एवं लेख ऑनलाइन प्रस्तुत करें",
+"inauguration album": "उद्घाटन एल्बम",
+"programmes": "कार्यक्रम",
+"Quick links": "त्वरित लिंक",
+"Scholars and dignitaries on stage at the Fellows' Meet 2025-26": "अध्येता समागम 2025-26 के मंच पर विद्वान एवं गणमान्य व्यक्ति",
+"Lighting of the ceremonial lamp at an ICPR programme in New Delhi.": "नई दिल्ली में आईसीपीआर के एक कार्यक्रम में दीप प्रज्वलन।",
+"26 October 2026": "26 अक्टूबर 2026",
+"Important updates, scrollable": "महत्वपूर्ण अद्यतन, स्क्रॉल करने योग्य",
+"Dignitaries on stage holding up newly released books at a prize distribution and book release function": "पुरस्कार वितरण एवं पुस्तक विमोचन समारोह में मंच पर नई पुस्तकें प्रदर्शित करते गणमान्य व्यक्ति",
+"india.gov.in, National Portal of India": "india.gov.in, भारत का राष्ट्रीय पोर्टल",
+"MyGov citizen engagement platform": "मायगव नागरिक सहभागिता मंच",
+"Indian Council of Social Science Research": "भारतीय सामाजिक विज्ञान अनुसंधान परिषद्",
+"Indian Council of Historical Research": "भारतीय इतिहास अनुसंधान परिषद्",
+"Azadi Ka Amrit Mahotsav": "आज़ादी का अमृत महोत्सव",
+"G20 India: One Earth, One Family, One Future": "जी20 भारत: वसुधैव कुटुम्बकम् – एक पृथ्वी, एक परिवार, एक भविष्य",
+"Grants & Fellowships": "अनुदान एवं अध्येतावृत्तियाँ",
+"News & Events": "समाचार एवं कार्यक्रम",
+"Complaints": "शिकायतें"
+};
+  var ATTRS=['alt','aria-label','placeholder','title'], nodes=null, attrs=null, origTitle=document.title;
+  var I={lang:'en',t:function(k){return I.lang==='hi'&&D[k]?D[k]:k;}};
+  window.ICPR_I18N=I;
+  function norm(v){return v.replace(/\s+/g,' ').trim();}
+  function wrap(orig,txt){var m=orig.match(/^(\s*)[\s\S]*?(\s*)$/); return m[1]+txt+m[2];}
+  function collect(){
+    nodes=[]; attrs=[];
+    var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){var el=n.parentElement;
+      if(!el||el.closest('script,style,svg,[data-no-i18n]')) return NodeFilter.FILTER_REJECT; return n.nodeValue.trim()?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;}});
+    var n; while((n=w.nextNode())) nodes.push({n:n,orig:n.nodeValue});
+    document.querySelectorAll('[alt],[aria-label],[placeholder],[title]').forEach(function(el){
+      if(el.closest('[data-no-i18n]')) return;
+      ATTRS.forEach(function(a){var v=el.getAttribute(a); if(v&&v.trim()) attrs.push({el:el,a:a,orig:v});});});
+  }
+  function setLang(l){
+    if(!nodes) collect();
+    I.lang=l;
+    nodes.forEach(function(o){var k=norm(o.orig); o.n.nodeValue=(l==='hi'&&D[k])?wrap(o.orig,D[k]):o.orig;});
+    attrs.forEach(function(o){var k=o.orig.trim(); o.el.setAttribute(o.a,(l==='hi'&&D[k])?D[k]:o.orig);});
+    document.title=(l==='hi'&&D[origTitle])?D[origTitle]:origTitle;
+    document.documentElement.lang=l;
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.lang===l));});
+    if(window.ICPR_applyA11y) window.ICPR_applyA11y();
+    if(window.ICPR_refreshCarousel) window.ICPR_refreshCarousel();
+    try{localStorage.setItem('icpr-lang',l);}catch(e){}
+  }
+  document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
+  try{if(localStorage.getItem('icpr-lang')==='hi') setLang('hi');}catch(e){}
+})();
+</script>
+
+</body>
+</html>
